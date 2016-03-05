@@ -35,7 +35,17 @@ Use www.baidu.com if you feel that you are not clear enough about them.
 <br>
 <br>
 
-2. Using Git Shell
+2.Using GitHub desktop
+
+####2.1 Use the tags to view current changes and change history
+
+####2.2 When chosen the Changes tag, you can see your changes in the subwindow below. Type something in the Summary and Description and then you can commit your changes. 
+
+####2.3 Click the Sync button at the upper right corner to sync your changes to online documents.
+
+####2.4 When chosen the History tag, you can select any changes someone made before and see the detail changes in every files. You can also make inline comments by viewing the changes in the webpage.
+
+3. Using Git Shell(Not necessary, GitHub desktop works well in both Windows and Mac OS)
 ------------------
 
     Although GitHub Desktop offers functions such as publish and synchronize, they are not clear enough. 
