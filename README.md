@@ -3,7 +3,6 @@
 
 Tips for users:
 
-Hello Hello
 
 You should know a little bit about what is Git and what is GitHub.
 Use www.baidu.com if you feel that you are not clear enough about them.
