@@ -35,7 +35,8 @@ Use www.baidu.com if you feel that you are not clear enough about them.
 <br>
 <br>
 
-2.Using GitHub desktop
+2.Using GitHub desktop:
+---------------------
 
 ####2.1 Use the tags to view current changes and change history
 
@@ -102,5 +103,18 @@ Use www.baidu.com if you feel that you are not clear enough about them.
 <br>
 <br>
 
---by jwt 2016-2-29
+4. Directions from Mr. Si Ha
+-----------------------------
+
+####4.1 我已经建立了两个文件夹, 分别是 Chapter 1 和 Chapter 2. 每个文件夹包含一个 .tex 文档, 一个 .pdf 文档和一个名为 figures 的文件夹
+
+####4.2 想添加答案的同学, 先在自己的电脑上写好 TeX 文档, 然后复制到相应章节中的 .tex 文档中, 编译之后把 .tex 文档和 .pdf 同步上来
+
+####4.3 如果需要插图的话, 在 figures 文件夹中建立你自己的一个子文件夹, 将你需要用到的图片放进去, 然后通过相对路径调用即可
+
+####4.4 复制前先同步一次保证本地的文件是最新的，然后编译没问题了再commit你的change，然后再同步即可
+
+很惭愧, 一点微小的工作
+
+--last edit by jwt 2016-3-5
     
