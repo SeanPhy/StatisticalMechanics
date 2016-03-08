@@ -44,7 +44,7 @@ Finally,
 f'(\Omega_1)&=\Omega_2f'(\Omega)=\frac{\Omega_2}{\Omega_1}f'(\Omega_2)\\
 \Omega_1f'(\Omega_1)&=\Omega_2f'(\Omega_2)\\
 \end{align}
-It is obvious that this equation holds for all $\Omega$. Set the value of the equation constant k. 
+It is obvious that this equation holds for all $\Omega$. Set the value of the equation constant k.
 \begin{align}
 \Omega\frac{df(\Omega)}{d\Omega}&=k\\
 f(\Omega)&=kln\Omega+C\\
@@ -54,7 +54,7 @@ Using a special value $\Omega=1$
 f(\Omega*1)&=f(\Omega)+f(1)\\
 C=&f(1)=0\\
 \end{align}
-And get the result 
+And get the result
 \begin{equation}
 S=f(\Omega)=kln\Omega
 \end{equation}
@@ -91,5 +91,27 @@ N k \times 300= 10^{5} \times \frac{\pi}{10}
 \end{equation}
 Thus $\Delta T = 10^{4}/Nk \sim 955 K$.
 
-
+\section*{Problem 1.10}
+    Just use equation $(1.4.21)$ and $(1.4.23)$, we have:
+    \begin{equation}
+        S(N,V,E)=Nk\ln \left[V\left(\frac{2\pi m k T}{h^2}\right)^{3/2}\right]+\frac{3}{2}Nk
+    \end{equation}
+    Since He and Ar have the same N,V. We can get the T that He and Ar have the same entropy:
+    $$
+        T=0K (?)
+    $$
+\section*{Problem 1.11}
+    As $N_2$ and $O_2$ are mixed together at the same pressure and temperature, we can know that the volume of mixed gas is: $V=V_1+V_2$. And we can get the entropy of mixing by utilizing equation $(1.5.3)$:
+    \begin{equation}
+        \Delta S=k \left[N_1 \ln\frac{V}{V_1}+N_2 \ln\frac{V}{V_2}\right]
+    \end{equation}
+    for per mole of the air formed:
+    \begin{equation}
+        \begin{aligned}
+            \Delta S_n&=k \left[N_1 \ln\frac{V}{V_1}+N_2 \ln\frac{V}{V_2}\right]/(n_1+n_2)\\
+                    &=R \left[n_1 \ln\frac{V}{V_1}+n_2 \ln\frac{V}{V_2}\right]/(n_1+n_2)\\
+                    &=4.16~J\cdot mol^{-1}\cdot K^{-1}\\
+        \end{aligned}
+    \end{equation}
+\section*{Problem 1.12}
 \end{document}
