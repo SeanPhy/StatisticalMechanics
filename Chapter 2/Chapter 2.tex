@@ -137,6 +137,77 @@ The phase space volume is:
 $$(\frac{2}{\omega})^N E^{N-1} \pi ^N \frac{1}{(N-1)!} dE$$
 while dE=$\hbar \omega$,\quad we get\quad $\omega_0=h^N$
 \section*{Problem 2.8}
+Assume that
+\begin{equation}
+V_{3N}=\mathop{\int\cdots\int}\limits_{0\le\sum\limits_{i=1}^{N}r_i\le R}\prod_{i=1}^{N}(4\pi r_i^2\mathrm{d}r_i)=C_NR^{3N}
+\end{equation}
+we can easily see that $C_N$ is a constant. And we have
+\begin{equation}
+\prod_{i=1}^{N}(4\pi r_i^2\mathrm{d}r_i)=3NC_NR^{3N-1}\mathrm{d}R
+\end{equation}
+consider the following equation
+\begin{eqnarray}
+(\int_{0}^{\infty}\mathrm{e}^{-r}r^2\mathrm{d}r)^N&=&\mathop{\int\cdots\int}\limits_{0\le\sum\limits_{i=1}^{N}r_i\le R}\mathrm{e}^{-R}\prod_{i=0}^Nr_i^2\mathrm{d}r_i\\&=&\int_0^\infty\mathrm{e}^{-R}\frac{3NC_N}{(4\pi)^N}R^{3N-1}\mathrm{d}R\\&=&\frac{(3N)!C_N}{(4\pi)^N}
+\end{eqnarray}
+We also have
+\begin{equation}
+(\int_{0}^{\infty}\mathrm{e}^{-r}r^2\mathrm{d}r)^N=2^N
+\end{equation}
+Thus
+\begin{equation}
+C_N=\frac{(8\pi)^N}{(3N)!}
+\end{equation}
+and
+\begin{equation}
+V_{3N}=\mathop{\int\cdots\int}\limits_{0\le\sum\limits_{i=1}^{N}r_i\le R}\prod_{i=1}^{N}(4\pi r_i^2\mathrm{d}r_i)=\frac{(8\pi R^3)^N}{(3N)!}
+\end{equation}
+The volume of phase space for ralativistic gas $(\varepsilon=pc)$ can be obtained by replacing the $R$ in $V_N$ by $E/c$.
+\begin{eqnarray}
+V&=&\mathop{\int\cdots\int}\limits_{0\le\sum\limits_{i=1}^{N}r_i\le E/c}4\pi p_i^2\mathrm{d}p_i\\&=&\frac{(8\pi E^3V)^N}{(3N)! c^{3N}}
+\end{eqnarray}
+The entropy of this system is obtained by 
+\begin{equation}
+S=k\ln\Omega=k\ln\frac{V}{h^{3N}}
+\end{equation}
+Using the relations we can get that
+\begin{eqnarray}
+\frac{\partial S}{\partial E}&=&\frac{1}{T}=\frac{3Nk}{E}\\
+\frac{\partial S}{\partial V}&=&\frac{P}{T}=\frac{Nk}{V}\\
+C_V&=&(\frac{\partial E}{\partial T})_{N,V}=3Nk\\
+C_P&=&\frac{\partial(E+PV)}{\partial T}=4Nk\\
+\end{eqnarray}
 
 \section*{Problem 2.9}
+Like problem 2.8,
+\begin{equation}
+\mathop{\int\cdots\int}\limits_{0\le\sum\limits_{i=1}^{3N}|x_i|\le R}(\mathrm{d}x_1\dots\mathrm{d}x_{3N})=C_NR^{3N}
+\end{equation}
+Thus
+\begin{equation}
+\mathop{\int\cdots\int}\limits_{0\le\sum\limits_{i=1}^{3N}|x_i|\le R}(\mathrm{e}^{-R}\mathrm{d}x_1\dots\mathrm{d}x_{3N})=\int\mathrm{e}^{-R}C_NR^{3N-1}\mathrm{d}R=C_N(3N)!
+\end{equation}
+On the other hand,
+\begin{equation}
+\mathop{\int\cdots\int}\limits_{0\le\sum\limits_{i=1}^{3N}|x_i|\le R}(\mathrm{e}^{-R}\mathrm{d}x_1\dots\mathrm{d}x_{3N})=(\int_{-\infty}^{\infty}\mathrm{d}x_1\dots\mathrm{d}x_{3N})^3N=2^{3N}
+\end{equation}
+We can see that
+\begin{equation}
+\mathop{\int\cdots\int}\limits_{0\le\sum\limits_{i=1}^{3N}|x_i|\le R}(\mathrm{d}x_1\dots\mathrm{d}x_{3N})=\frac{(2R)^{3N}}{3N!}
+\end{equation}
+The phase space for 3N relativistic particles moving in 1 dimension can be obtained using the integral before.
+\begin{equation}
+V=\frac{(2EL)^{3N}}{(3N)!(c)^{3N}}
+\end{equation}
+The entropy of this system is obtained by 
+\begin{equation}
+S=k\ln\Omega=k\ln\frac{V}{h^{3N}}
+\end{equation}
+Using the relations we can get that
+\begin{eqnarray}
+\frac{\partial S}{\partial E}&=&\frac{1}{T}=\frac{3Nk}{E}\\
+\frac{\partial S}{\partial L}&=&\frac{F}{T}=\frac{3Nk}{L}\\
+C_V&=&(\frac{\partial E}{\partial T})_{N,V}=3Nk\\
+C_P&=&\frac{\partial(E+FL)}{\partial T}=6Nk\\
+\end{eqnarray}
+
 \end{document}
