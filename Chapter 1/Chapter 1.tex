@@ -20,6 +20,39 @@
 \begin{document}
 \maketitle
 \section*{Problem 1.1}
+\begin{equation}
+\ln\Omega^{(0)}(E^{(0)},E_1)=\ln\Omega(E_1)=\ln(\Omega_1(E_1)\Omega_2(E_2))
+\end{equation}
+We can expand $\ln\Omega_1(E_1)$ and $\ln\Omega_2(E_1)$ into series near $\bar{E_1}$, and the leading terms are
+\begin{align}
+&\ln\Omega_1(E_1)=\ln\Omega_1(\bar{E_1})+\left. \frac{\partial \Omega_1(E_1)}{\partial E_1}\right|_{E_1=\bar{E_1}}(E_1-\bar{E_1})+\frac{1}{2}\left. \frac{\partial^2 \Omega_1(E_1)}{\partial E_1^2}\right|_{E_1=\bar{E_1}}(E_1-\bar{E_1})^2+\cdots\\
+&\ln\Omega_2(E_1)=\ln\Omega_2(\bar{E_1})+\left. \frac{\partial \Omega_2(E_1)}{\partial E_1}\right|_{E_1=\bar{E_1}}(E_1-\bar{E_1})+\frac{1}{2}\left. \frac{\partial^2 \Omega_2(E_1)}{\partial E_1^2}\right|_{E_1=\bar{E_1}}(E_1-\bar{E_1})^2+\cdots\\
+\end{align}
+We can set the complicated derivatives to simple symbols
+\begin{align}
+&\left. \frac{\partial \Omega_1(E_1)}{\partial E_1}\right|_{E_1=\bar{E_1}}=a_1\\
+&\left. \frac{\partial \Omega_2(E_1)}{\partial E_1}\right|_{E_1=\bar{E_1}}=a_2\\
+&\left. \frac{\partial^2 \Omega_1(E_1)}{\partial E_1^2}\right|_{E_1=\bar{E_1}}=b_1\\
+&\left. \frac{\partial^2 \Omega_2(E_1)}{\partial E_1^2}\right|_{E_1=\bar{E_1}}=b_2\\
+\end{align}
+\begin{align}
+&\ln\Omega(E_1)=\ln(\Omega_1(\bar{E_1})\Omega_2(\bar{E_1}))+(a_1+a_2)(E_1-\bar{E_1})+\frac{b_1+b_2}{2}(E_1-\bar{E_1})^2+\cdots
+\end{align}
+This fuction reach its maximum under thermodynamic equilibrium condition at $E_1=\bar{E_1}$. Thus the linear term must vanish.
+\begin{align}
+\ln\Omega(E_1)&=\ln(\Omega_1(\bar{E_1})\Omega_2(\bar{E_1}))+\frac{b_1+b_2}{2}(E_1-\bar{E_1})^2+\cdots\\
+&\approx \frac{b_1+b_2}{2}(E_1-\bar{E_1})^2+\ln(\Omega(\bar{E_1}))\\
+\end{align}
+\begin{align}
+\Omega(E_1)&=e^{(b_1+b_2)(E_1-\bar{E_1})^2+\ln(\Omega(\bar{E_1}))}=Ae^{\frac{b_1+b_2}{2}(E_1-\bar{E_1})^2}\\
+A&=e^{\ln(\Omega(\bar{E_1}))}\\
+\end{align}
+Which is obviously a gaussian function.\\
+Gaussian RMS can be easily determined to be
+\begin{align}
+\frac{1}{2(b_1+b_2)}=\frac{1}{2}\frac{1}{(\frac{\partial \beta_1}{\partial E_1}+\frac{\partial \beta_2}{\partial E_2})}=\frac{1}{2}\frac{1}{\frac{1}{k{T_1}^2C_{v1}}+\frac{1}{k{T_2}^2C_{v2}}}
+\end{align}
+For the example of ideal classical gases, we can subtitute $C_vi=\frac{3}{2}N_ik$ and obtain $\frac{3}{2}k^2T^2\frac{N_1N_2}{N_1+N_2}$\\
 
 \section*{Problem 1.2}
 Utilizing the additive characteristic of $S=f(\Omega)$ and get
@@ -57,7 +90,7 @@ C=&f(1)=0\\
 \end{align}
 And get the result
 \begin{equation}
-S=f(\Omega)=kln\Omega
+S=f(\Omega)=k\ln\Omega
 \end{equation}
 \section*{Problem 1.3}
 
