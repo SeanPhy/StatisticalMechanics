@@ -11,6 +11,7 @@
 \usepackage{latexsym}
 \usepackage{hyperref}
 \usepackage{feynmf}
+\usepackage{enumerate}
 \linespread{1.1}
 
 \author{SM-at-THU}
@@ -114,6 +115,47 @@ Thus $\Delta T = 10^{4}/Nk \sim 955 K$.
         \end{aligned}
     \end{equation}
 \section*{Problem 1.12}
+
+    \begin{enumerate}[(a)]
+
+        \item   1
+
+        \item   Suppose that $N=N_1+N_2$. And we have $\left(\Delta S \right)^*$ by utilizing equation (1.5.4) :
+                \begin{equation}
+                \begin{aligned}
+                    \left(\Delta S \right)^*&=k\left[N_1 \ln \frac{N}{N_1}+N_2 \ln \frac{N}{N_2} \right]\\
+                                            &=k\left[N \ln N- N_1 \ln N_1 -N_2 \ln N_2 \right]
+                \end{aligned}
+                \end{equation}
+                Then we have the derivative of $\left(\Delta S \right)^*$ with respect to $N_1$:
+                \begin{equation}
+                \begin{aligned}
+                    \frac{d \left(\Delta S \right)^*}{d N_1}&=-\ln N_1-\frac{\partial N_2}{\partial N_1}\ln N_2\\
+                                                            &=-\left(\ln N_1-\ln N_2\right)
+                \end{aligned}
+                \end{equation}
+                It shows that $\frac{d \left(\Delta S \right)^*}{d N_1}$ satisfies:
+                \begin{equation}
+                \frac{d \left(\Delta S \right)^*}{d N_1}
+                    \left\{
+                \begin{aligned}
+                    &<0 \qquad  N_1>N_2\\
+                    &=0 \qquad  N_1=N_2\\
+                    &>0 \qquad  N_1<N_2\\
+                \end{aligned}
+                    \right.
+                \end{equation}
+                So we can know that $\left(\Delta S \right)^*$ have the only maximum value at $N_1=N_2$:
+                \begin{equation}
+                    \max \left(\Delta S \right)^*=\left(N_1+N_2\ln 2\right)
+                \end{equation}
+                Then we get:
+                \begin{equation}
+                    \max \left(\Delta S \right)^*\leq\left(N_1+N_2\ln 2\right)
+                \end{equation}
+                The equality holding when and only when $N_2=N_2$   
+    \end{enumerate}
+
 \section*{Problem 1.16}
 Theorem:\\
 If $f(x,y,z)=0$,then we have
