@@ -26,14 +26,14 @@
 We can expand $\ln\Omega_1(E_1)$ and $\ln\Omega_2(E_1)$ into series near $\bar{E_1}$, and the leading terms are
 \begin{align}
 &\ln\Omega_1(E_1)=\ln\Omega_1(\bar{E_1})+\left. \frac{\partial \Omega_1(E_1)}{\partial E_1}\right|_{E_1=\bar{E_1}}(E_1-\bar{E_1})+\frac{1}{2}\left. \frac{\partial^2 \Omega_1(E_1)}{\partial E_1^2}\right|_{E_1=\bar{E_1}}(E_1-\bar{E_1})^2+\cdots\\
-&\ln\Omega_2(E_1)=\ln\Omega_2(\bar{E_1})+\left. \frac{\partial \Omega_2(E_1)}{\partial E_1}\right|_{E_1=\bar{E_1}}(E_1-\bar{E_1})+\frac{1}{2}\left. \frac{\partial^2 \Omega_2(E_1)}{\partial E_1^2}\right|_{E_1=\bar{E_1}}(E_1-\bar{E_1})^2+\cdots\\
+&\ln\Omega_2(E_1)=\ln\Omega_2(\bar{E_1})+\left. \frac{\partial \Omega_2(E_1)}{\partial E_1}\right|_{E_1=\bar{E_1}}(E_1-\bar{E_1})+\frac{1}{2}\left. \frac{\partial^2 \Omega_2(E_1)}{\partial E_1^2}\right|_{E_1=\bar{E_1}}(E_1-\bar{E_1})^2+\cdots
 \end{align}
 We can set the complicated derivatives to simple symbols
 \begin{align}
 &\left. \frac{\partial \Omega_1(E_1)}{\partial E_1}\right|_{E_1=\bar{E_1}}=a_1\\
 &\left. \frac{\partial \Omega_2(E_1)}{\partial E_1}\right|_{E_1=\bar{E_1}}=a_2\\
 &\left. \frac{\partial^2 \Omega_1(E_1)}{\partial E_1^2}\right|_{E_1=\bar{E_1}}=b_1\\
-&\left. \frac{\partial^2 \Omega_2(E_1)}{\partial E_1^2}\right|_{E_1=\bar{E_1}}=b_2\\
+&\left. \frac{\partial^2 \Omega_2(E_1)}{\partial E_1^2}\right|_{E_1=\bar{E_1}}=b_2
 \end{align}
 \begin{align}
 &\ln\Omega(E_1)=\ln(\Omega_1(\bar{E_1})\Omega_2(\bar{E_1}))+(a_1+a_2)(E_1-\bar{E_1})+\frac{b_1+b_2}{2}(E_1-\bar{E_1})^2+\cdots
@@ -41,11 +41,11 @@ We can set the complicated derivatives to simple symbols
 This fuction reach its maximum under thermodynamic equilibrium condition at $E_1=\bar{E_1}$. Thus the linear term must vanish.
 \begin{align}
 \ln\Omega(E_1)&=\ln(\Omega_1(\bar{E_1})\Omega_2(\bar{E_1}))+\frac{b_1+b_2}{2}(E_1-\bar{E_1})^2+\cdots\\
-&\approx \frac{b_1+b_2}{2}(E_1-\bar{E_1})^2+\ln(\Omega(\bar{E_1}))\\
+&\approx \frac{b_1+b_2}{2}(E_1-\bar{E_1})^2+\ln(\Omega(\bar{E_1}))
 \end{align}
 \begin{align}
 \Omega(E_1)&=e^{(b_1+b_2)(E_1-\bar{E_1})^2+\ln(\Omega(\bar{E_1}))}=Ae^{\frac{b_1+b_2}{2}(E_1-\bar{E_1})^2}\\
-A&=e^{\ln(\Omega(\bar{E_1}))}\\
+A&=e^{\ln(\Omega(\bar{E_1}))}
 \end{align}
 Which is obviously a gaussian function.\\
 Gaussian RMS can be easily determined to be
@@ -76,17 +76,17 @@ Apply to $(\frac{dS}{d\Omega_2})_{\Omega_1}$, we can get similar result.
 Finally,
 \begin{align}
 f'(\Omega_1)&=\Omega_2f'(\Omega)=\frac{\Omega_2}{\Omega_1}f'(\Omega_2)\\
-\Omega_1f'(\Omega_1)&=\Omega_2f'(\Omega_2)\\
+\Omega_1f'(\Omega_1)&=\Omega_2f'(\Omega_2)
 \end{align}
 It is obvious that this equation holds for all $\Omega$. Set the value of the equation constant k.
 \begin{align}
 \Omega\frac{df(\Omega)}{d\Omega}&=k\\
-f(\Omega)&=kln\Omega+C\\
+f(\Omega)&=kln\Omega+C
 \end{align}
 Using a special value $\Omega=1$
 \begin{align}
 f(\Omega*1)&=f(\Omega)+f(1)\\
-C=&f(1)=0\\
+C=&f(1)=0
 \end{align}
 And get the result
 \begin{equation}
@@ -97,20 +97,20 @@ When the two systems are brought together, they can form an isolated system. Ene
 \begin{align}
 E_A+E_B&=E_0\\
 N_A+N_B&=N_0\\
-dS_A+dS_B&\geq0\\
+dS_A+dS_B&\geq0
 \end{align}
 Apply derivation and get
 \begin{align}
 dE_A+dE_B&=0\\
 dN_A+dN_B&=0\\
-dS_A+dS_B&\geq0\\
+dS_A+dS_B&\geq0
 \end{align}
 Subtitute these relations into equation
 \begin{align}
 dE_A&=T_AdS_A-p_AdV_A+\mu_A dN_A\\
 dE_B&=T_BdS_B-p_BdV_B+\mu_B dN_B\\
 dV_A&=0\\
-dV_B&=0\\
+dV_B&=0
 \end{align}
 and get
 \begin{align}
