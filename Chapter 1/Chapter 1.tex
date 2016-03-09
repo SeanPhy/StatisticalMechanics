@@ -117,10 +117,30 @@ Thus $\Delta T = 10^{4}/Nk \sim 955 K$.
 \section*{Problem 1.12}
 
     \begin{enumerate}[(a)]
-
-        \item   1
-
-        \item   Suppose that $N=N_1+N_2$. And we have $\left(\Delta S \right)^*$ by utilizing equation (1.5.4) :
+        \item   Equation $(1.5.3a)$ can be written as: 
+                \begin{equation}
+                \begin{aligned}
+                    \left(\Delta S \right)_{1\equiv 2}&=N_1\ln \frac{(V_1+V_2)N_1}{V_1(N_1+N_2)}+N_2\ln \frac{(V_1+V_2)N_2}{V_2(N_1+N_2)}\\
+                                                    &=(N_1+N_2)\left[y\ln \frac{y}{x}+(1-y)\ln\frac{1-y}{1-x}\right]
+                \end{aligned}
+                \end{equation}
+                Here $x=V_1/(V_1+V_2), y=N_1/(N_1+N_2)$.\\
+                
+                Consider the function $f(x,y)=y \ln \frac{y}{x}$, we can get the second derivatives:
+                \begin{equation}
+                    D^2 f(x,y)=\left[
+                    \begin{array}{cc}
+                        y/x^2 & -1/x \\
+                        -1/x & 1/y \\
+                    \end{array}\right]
+                \end{equation}
+                Since $D^2 f(x,y)$ is a positive-semidefinite, $f(x,y)$ is a convex function. Then we can know that:
+                \begin{equation}
+                    \frac{1}{2} f(x,y)+\frac{1}{2}f(1-x,1-y)\geq f(1/2,1/2)=0
+                \end{equation}
+                This means $\left(\Delta S \right)_{1\equiv 2}\geq 0$ and the equality holding only when $N_1/V_1=N_2/V_2$
+                
+        \item   Suppose that $N=N_1+N_2$. And we have $\left(\Delta S \right)^*$ by utilizing equation $(1.5.4)$ :
                 \begin{equation}
                 \begin{aligned}
                     \left(\Delta S \right)^*&=k\left[N_1 \ln \frac{N}{N_1}+N_2 \ln \frac{N}{N_2} \right]\\
@@ -153,7 +173,7 @@ Thus $\Delta T = 10^{4}/Nk \sim 955 K$.
                 \begin{equation}
                     \max \left(\Delta S \right)^*\leq\left(N_1+N_2\ln 2\right)
                 \end{equation}
-                The equality holding when and only when $N_2=N_2$   
+                The equality holding when and only when $N_2=N_2$
     \end{enumerate}
 
 \section*{Problem 1.16}
