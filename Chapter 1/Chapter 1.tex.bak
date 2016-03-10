@@ -148,8 +148,14 @@ N k \times 300= 10^{5} \times \frac{\pi}{10}
 \end{equation}
 Thus $\Delta T = 10^{4}/Nk \sim 955 K$.
 
-\section*{Problem 1.7}
-If the energy have follow extreme relativistic form.We can learn from 1.4.
+
+
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\begin{document}
+Problem 1.7\\
+If the energy have follow extreme relativistic form.We can learn from 1.4:
 $$S(N,E,V)=S(N,\epsilon^2V^\frac{2}{3})$$
 Hence,for the constancy of S and N,which defines a reversible adiabatic process.
 $$\epsilon^2V^\frac{2}{3}=const$$
@@ -157,22 +163,23 @@ Pressure could be inferred by
 $$P=-(\frac{\partial E}{\partial V})_{N,S}$$
 So we can get the adiabatic equation.
 $$PV^\frac{4}{3}=const$$
-So the adiabatic exponent $\frac{C_p}{C_v}=\frac{4}{3}$
-\section*{Problem 1.8}
-We use $n_i$ to show the number of quasiparticles in the $n_{th}$ energy state,and we can derive:
+So the adiabatic exponent $\frac{C_p}{C_v}=\frac{4}{3}$\\\\
+Problem 1.8\\
+We use $n_i$ to show the number of quasiparticles in the $n_{th}$ energy state,and we can derive:\\
 $$\sum_{i=0}^{+\infty}n_i=N$$
 $$\sum_{i=0}^{+\infty}n_i\epsilon_i=E$$
 We use the partition function of canonical system.
 $$Z=\sum_{i=0}^{+\infty}g_ie^{\frac{\epsilon_i}{KT}}$$
 $$P_i=\frac{e^{\frac{\epsilon_i}{KT}}}{Z}$$
 finally you can get the T
-$$T=\frac{h\nu}{kln(1+\frac{Nh\nu}{E})}$$
-\section*{Problem 1.9}
+$$T=\frac{h\nu}{kln(1+\frac{Nh\nu}{E})}$$\\\\
+Problem 1.9\\
 According that S is an extensive quantity.So S is a linear function.
 $$S=aN+bV+cE$$
 $$a=(\frac{\partial S}{\partial N})_{V,E},b=(\frac{\partial S}{\partial V})_{N,E},c=(\frac{\partial S}{\partial E})_{V,N}$$
 So
 $$N(\frac{\partial S}{\partial N})_{V,E}+V(\frac{\partial S}{\partial V})_{N,E}+E(\frac{\partial S}{\partial E})_{V,N}=S$$
+\end{document}
 
 \section*{Problem 1.10}
     Just use equation $(1.4.21)$ and $(1.4.23)$, we have:
