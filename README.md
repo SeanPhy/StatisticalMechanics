@@ -1,7 +1,8 @@
 # StatisticalMechanics
 
+Contributers: SM@THU
 
-Tips for users:
+Tips for new contributers:
 
 
 You should know a little bit about what is Git and what is GitHub.
