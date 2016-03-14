@@ -48,4 +48,56 @@
 
 \section*{Problem 3.7}
 
+\section*{Problem 3.11}
+Suppose $pV^{n} = C$, so the work done is
+\begin{equation}
+\Delta W = \int^{V_{2}}_{V_{1}} \frac{C}{V^{n}} dV = \frac{C}{n-1} (V^{1-n}_{2} - V^{1-n}_{1})
+\end{equation}
+The energy difference is given by
+\begin{equation}
+\Delta U = p_{2}V_{2} - p_{1}V_{1} = C (V^{1-n}_{2} - V^{1-n}_{1})
+\end{equation}
+Therefore, the heat absorbed is
+\begin{equation}
+\Delta Q =  C\frac{n-2}{n-1} (V^{1-n}_{2} - V^{1-n}_{1})
+\end{equation}
+
+\section*{Problem 3.21}
+\noindent (a) Classically, the harmonic equation of motion leads to $x = A \sin \omega t$. As a result, the kinetic energy and potential energy will be $m \omega^{2} A^{2} \cos^{2} \omega t /2$ and $m \omega^{2} A^{2} \sin^{2} \omega t /2$ respectively. Average them it's easy to see that $\bar{K} = \bar{U} =m \omega^{2} A^{2}/4$.\\
+Quantum-mechanically, $\psi = \sum_{n} c_{n} \psi_{n}$ where $\psi_{n}$ is the \emph{n}-th Hermitian polynomial. Using the recursive relations, we have
+\begin{align}
+&\bar{K} = -\frac{\hbar^{2}}{2m} \sum_{n} |c_{n}|^{2} \int \psi^{*} \frac{d^{2}}{dx^{2}} \psi dx = \sum_{n} |c_{n}|^{2} \frac{\hbar \omega (2n+1)}{4} = \frac{1}{2} \sum_{n} |c_{n}|^{2} E_{n}\\
+&\bar{U} = \frac{m \omega^{2}}{2} \sum_{n} |c_{n}|^{2} \int \psi^{*} x^{2} \psi dx= \sum_{n} |c_{n}|^{2} \frac{\hbar \omega (2n+1)}{4} = \frac{1}{2} \sum_{n} |c_{n}|^{2} E_{n}
+\end{align}
+\noindent (b) In Bohr-sommerfeld model, a quantized orbits are hypothesized, namely $m_{e}vr = n \hbar$. In the \emph{n}-th orbit, the total energy is $E_{n} = - Z^{2}k^{2}e^{4}m_{e}/2 \hbar^{2} n^{2}$. The radius of which is $r_{n} = n^{2} \hbar^{2} / Zke^{2}m_{e}$. By a naive calculation $\bar{U} = - Z^{2}k^{2}e^{4}m_{e}/ \hbar^{2} n^{2}$ and $\bar{T} = Z^{2}k^{2}e^{4}m_{e}/2 \hbar^{2} n^{2}$.\\
+In the Schroedinger hydrogen atom, $\psi_{nlm} = R_{nl}(r) Y_{lm}(\theta, \phi)$. The kinetic energy is given by
+\begin{eqnarray}
+\bar{T} &=& \frac{\hbar^{2}}{2m} \int \psi^{*}_{nlm} (\frac{d^{2}}{dr^{2}} + \frac{2}{r} \frac{d}{dr} - \frac{l(l+1)}{r^{2}})\psi_{nlm} r^{2} \sin \theta dr d\theta d\phi \notag \\
+&=& \frac{\hbar^{2}}{2m} \int R_{nl}(r) (\frac{1}{n^{2}a^{2}}) R_{nl}(r) r^{2}dr \notag \\
+&=& \frac{e^{2}}{2a n^{2}}
+\end{eqnarray}
+so $\bar{U} = - e^{2}/a n^{2}$. \emph{a} is the Bohr radius.\\
+\noindent (c) This is also a central force case. The results are quite identical to (b).
+
+\section*{Problem 3.31}
+``Partition function'' for single particle is
+\begin{equation}
+Q_{1} = 1 + e^{-\varepsilon/kT}.
+\end{equation}
+So a list of quatities can be obtained:
+\begin{align}
+&Q_{N} = (1 + e^{-\varepsilon/kT})^{N} \\
+&A = - NkT \ln (1 + e^{-\varepsilon/kT}) \\
+&\mu = - kT \ln (1 + e^{-\varepsilon/kT}) \\
+&p=0 \\
+&S = Nk \ln (1 + e^{-\varepsilon/kT}) + \frac{N \varepsilon}{T} \frac{e^{-\varepsilon/kT}}{1+e^{-\varepsilon/kT}} \\
+&U =  N \varepsilon \frac{e^{-\varepsilon/kT}}{1+e^{-\varepsilon/kT}} \\
+&C_{p} = C_{V} =  \frac{N \varepsilon^{2} e^{-\varepsilon/kT}}{kT^{2} (1+e^{-\varepsilon/kT})^{2}}
+\end{align}
+This specific heat is sometimes referred to \emph{Schottky anomaly}. 
+
+
+\section*{Problem 3.41}
+The equilibrium temperature will be positive, since the energy of the whole system is not bounded from above. This case is a bit like the spin and lattice case. For the subsystem of spins, its energy is bounded from above, so it is possible to attain a negative temperature. While the subsystem of lattice, i.e. ideal gas in this problem, only has positive temperature. The whole system doesn't have a energy limit, so the temperature will only be positive. And energy may flow from the spin subsystem to the ideal gas.
+
 \end{document}
