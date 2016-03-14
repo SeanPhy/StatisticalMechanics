@@ -120,16 +120,16 @@ and get
 \section*{Problem 1.4}
 Suppose $N$ is the number of particles, $v_{0}$ is the volume occupied by one particle and therefore the total number of microstates $\Omega$ is
 \begin{equation}
-\Omega = \frac{1}{N!}(\frac{V}{v_{0}}) \dots (\frac{V}{v_{0}}-N+1)
+\Omega = \frac{1}{N!}(\frac{V}{8v_{0}}) \dots (\frac{V}{8v_{0}}-N+1)
 \end{equation}
-Following $(1.4.2)$, we have
+The ``8'' comes from the geometrical configurations that two particle cannot be too close, i.e the distance between two particles is larger than $2r$. Following $(1.4.2)$, we have
 \begin{eqnarray}
 \frac{P}{T} &=& k \left(\frac{\partial \ln \Omega}{\partial V}\right)_{N,E} \\
 &=& k \frac{\partial \Omega}{\Omega \partial V} \\
-&=& k \frac{N}{V} \left(1+ \frac{(N-1)v_{0}}{2V} + \dots \right)
+&=& k \frac{N}{V} \left(1+ \frac{8(N-1)v_{0}}{2V} + \dots \right)
 \end{eqnarray}
-Considering only the first two terms, it corresponds to $P(V-b) = NkT$ with $b=N v_{0}/2$. \\
-Notes: I don't know why the problem says $b=4N v_{0}$ since this gas is hard sphere gas. Anyone has an idea?
+Considering only the first two terms, it corresponds to $P(V-b) = NkT$ with $b=4N v_{0}$. \\
+
 
 
 \section*{Problem 1.5}
@@ -257,6 +257,34 @@ $$N(\frac{\partial S}{\partial N})_{V,E}+V(\frac{\partial S}{\partial V})_{N,E}+
                 \end{equation}
                 The equality holding when and only when $N_2=N_2$
     \end{enumerate}
+
+\section*{Problem 1.13}
+In both cases the entropy will increase, but the increment of different gases mixing is larger. You can check that with the equations in \emph{Section 1.5} and I don't want to type it again, for entropy-saving's sake:)
+
+\section*{Problem 1.14}
+\begin{equation}
+(\Delta S)_{V}= \frac{3Nk}{2} \ln(\frac{T_{2}}{T_{1}})
+\end{equation}
+While fixing $p$, $V_{2}/V_{1} = T_{2}/T_{1}$.
+\begin{equation}
+(\Delta S)_{p}= Nk \ln(\frac{V_{2}}{V_{1}}) +\frac{3Nk}{2} \ln(\frac{T_{2}}{T_{1}}) = \frac{5Nk}{2} \ln(\frac{T_{2}}{T_{1}})
+\end{equation}
+Clealy, $(\Delta S)_{p} = 5/3 (\Delta S)_{V}$.
+
+
+\section*{Problem 1.15}
+From $V_{1} \rightarrow V_{2}$, we have
+\begin{align}
+\frac{p_{2a}}{p_{1a}} = \frac{V^{\gamma_{1}}_{1}}{V^{\gamma_{1}}_{2}} \\
+\frac{p_{2b}}{p_{1b}} = \frac{V^{\gamma_{2}}_{1}}{V^{\gamma_{2}}_{2}} \\
+\frac{p_{2}}{p_{1}} = \frac{V^{\gamma}_{1}}{V^{\gamma}_{2}}
+\end{align}
+where $p_{1a} = f_{1} p_{1}$ and $p_{2a} = f_{2} p_{1}$. 
+After some algebra it's straightforward to see 
+\begin{equation}
+\frac{1}{\gamma-1} = \frac{f_{1}}{\gamma_{1}-1}+\frac{f_{2}}{\gamma_{2}-1}
+\end{equation}
+
 
 \section*{Problem 1.16}
 Theorem:\\
