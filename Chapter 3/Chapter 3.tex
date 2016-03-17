@@ -115,6 +115,32 @@ P &=& \frac{NkT}{\overline{V}}\frac{\partial \overline{V}}{\partial V}\nonumber\
 \end{eqnarray}
 This result is the same as we have seen in Problem 1.4.
 
+
+\section*{Problem 3.15} % (fold)
+\label{sec:problem_3_15}
+
+	We have $Q_1(V,T)=\int g(\epsilon) e^{-\beta \epsilon}d \epsilon $. For 3-D extreme relativistic gas, $\epsilon =pc $, hence we have
+	\begin{gather*}
+		g(p)dp=\frac{V}{h^3}4 \pi p^2dp = \frac{4 \pi V }{h^3} \frac{\epsilon^2}{c^2} \frac{d \epsilon}{c} = g(\epsilon)d \epsilon\\
+		\therefore g(\epsilon)=\frac{4 \pi V}{(hc)^3} \epsilon^2\\
+		\therefore Q_1(V,T)=\int^{\infty}_0 g(\epsilon)d \epsilon=\frac{4 \pi V}{(hc)^3} \int^{\infty}_0 \epsilon^2 e^{-\beta \epsilon}d \epsilon = 8 \pi V \left( \frac{kT}{hc} \right)^3
+	\end{gather*}
+	
+	$\therefore$for $N$ molecules,
+	\begin{equation*}
+		Q_N(V,T)= \frac{1}{N!}\left\{ 8 \pi V \left( \frac{kT}{hc} \right)^3\right\}
+	\end{equation*}
+
+	From $Q_N(V,T)$, it's easy to calculate:
+	\begin{gather*}
+		P=\frac{1}{\beta} \frac{\partial Q}{\partial V} = \frac{N}{V}kT\\
+		U = -\frac{1}{Q} \frac{\partial Q}{\partial \beta}=3NkT\\
+		\gamma = \frac{4}{3}
+	\end{gather*}
+
+% section problem_3_15 (end)
+
+
 \section*{Problem 3.21}
 \noindent (a) Classically, the harmonic equation of motion leads to $x = A \sin \omega t$. As a result, the kinetic energy and potential energy will be $m \omega^{2} A^{2} \cos^{2} \omega t /2$ and $m \omega^{2} A^{2} \sin^{2} \omega t /2$ respectively. Average them it's easy to see that $\bar{K} = \bar{U} =m \omega^{2} A^{2}/4$.\\
 Quantum-mechanically, $\psi = \sum_{n} c_{n} \psi_{n}$ where $\psi_{n}$ is the \emph{n}-th Hermitian polynomial. Using the recursive relations, we have
