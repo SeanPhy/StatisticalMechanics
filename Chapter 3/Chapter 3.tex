@@ -56,6 +56,25 @@
 
 \section*{Problem 3.7}
 
+ \section*{Problem 3.9}
+ 	For an ideal monaomic gas,its heat capacity C would be 3R/2.While asume the whole progress is quasistatic,it would obey 
+ 	\begin{equation*}
+		pV=RT
+	\end{equation*}
+	\begin{equation*}
+		dU=-pdV+dQ=CdT
+	\end{equation*}
+	So we can get
+	\begin{equation*}
+		\frac{5}{2}pdV+\frac{3}{2}Vdp=dQ
+	\end{equation*}
+	For adiabatical process,dQ=0,so the ratio of the final pressure to initial pressure would be
+	\begin{equation*}
+		\frac{p_f}{p_i}=(1/2)^{5/3}
+	\end{equation*}
+	For the process with heat,the equation is difficult to solve,but naively thinking,for a process that the pressure doesn't change,it need heat to be added,so the final pressure would be higher than adiabatical process.
+	
+	
 \section*{Problem 3.11}
 Suppose $pV^{n} = C$, so the work done is
 \begin{equation}
@@ -140,6 +159,13 @@ This result is the same as we have seen in Problem 1.4.
 
 % section problem_3_15 (end)
 
+\section*{Problem 3.19}
+	\begin{equation*}
+		<\frac{dG}{dt}>=<\sum p_i \frac{dq_i}{dt}>+<\sum q_i \frac{dp_i}{dt}>=0
+	\end{equation*}
+	Above equation has used equation (3.7.5) and equation (3.7.6).
+	The equation (3.7.5) and equation(3.7.6)  both come from (3.7.2),so validity of one equation implies another's.
+	
 
 \section*{Problem 3.21}
 \noindent (a) Classically, the harmonic equation of motion leads to $x = A \sin \omega t$. As a result, the kinetic energy and potential energy will be $m \omega^{2} A^{2} \cos^{2} \omega t /2$ and $m \omega^{2} A^{2} \sin^{2} \omega t /2$ respectively. Average them it's easy to see that $\bar{K} = \bar{U} =m \omega^{2} A^{2}/4$.\\
@@ -183,6 +209,9 @@ So the expectation value of the potential is $\langle V\rangle = kT/4$. For the 
 \end{equation}
 So clearly we can get $\langle K\rangle = 2\langle V\rangle$.
 
+\section*{Problem 3.29}
+	I can't solve this problem.The intergral of the unharnomic terms in the partition fuction is infinite.
+	
 \section*{Problem 3.31}
 ``Partition function'' for single particle is
 \begin{equation}
@@ -231,6 +260,46 @@ S = \lim_{x\rightarrow +\infty}k\left[\ln g_1 + \ln\left(1+\frac{g_2}{g_1}e^{-x}
 \end{equation}
 From the distribution of canonical ensemble, we know that when the temperature is $T=0$, the system will stay on the ground state. Since the ground is g-fold degenerate, there are $g_1$ possible states. So the entropy is $S = k\ln g_1$.
 
+\section*{Problem 3.39}
+	By using equation (3.9.18) we could get
+	\begin{equation*}
+		Q=\sum_{m=-1/2}^{1/2}\exp(\beta g \mu_b mH)=\exp(-\beta g \mu_b H/2)(1+\exp(\beta g \mu_b H))
+	\end{equation*}
+	The mean magnetic moment is
+	\begin{equation*}
+		M=\frac{N}{\beta}\frac{\partial}{\partial H}\ln Q=\frac{1}{2}N\mu_b g\frac{1-\exp(-\beta g \mu_b H)}{1+\exp(-\beta g \mu_b H)}
+	\end{equation*}
+	While the number of parallel atoms $N_+$ and antiparallel $N_-$ satisfied that
+	\begin{equation}
+		\left\{
+		\begin{aligned}
+		\overset{.} N_+ +N_- =N\\
+		(N_+ -N_-) g \mu_b J =M\\
+		J=1/2
+		\end{aligned}
+		\right.
+	\end{equation}
+	So we could get the answer
+	\begin{equation}
+		\left\{
+		\begin{aligned}
+		\overset{.} 
+		{N_+}/{N}=\frac{1}{1+\exp(-\beta g \mu_b H)}\\
+		{N_-}/{N} =\frac{\exp(-\beta g \mu_b H)}{1+\exp(-\beta g \mu_b H)}\\
+		\end{aligned}
+		\right.
+	\end{equation}
+	Acoording to the given situation,flux density 0.1 $weber/m^2$ and temperature of 1000K,the respective fractions are
+	\begin{equation}
+		\left\{
+		\begin{aligned}
+		\overset{.} 
+		{N_+}/{N}=50.00168\%\\
+		{N_-}/{N} =49.99832\%\\
+		\end{aligned}
+		\right.
+	\end{equation}
+	
 \section*{Problem 3.41}
 The equilibrium temperature will be positive, since the energy of the whole system is not bounded from above. This case is a bit like the spin and lattice case. For the subsystem of spins, its energy is bounded from above, so it is possible to attain a negative temperature. While the subsystem of lattice, i.e. ideal gas in this problem, only has positive temperature. The whole system doesn't have a energy limit, so the temperature will only be positive. And energy may flow from the spin subsystem to the ideal gas.
 
