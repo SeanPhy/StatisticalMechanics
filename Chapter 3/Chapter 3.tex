@@ -178,7 +178,7 @@ For classical ideal gas
 	
 	$\therefore$for $N$ molecules,
 	\begin{equation*}
-		Q_N(V,T)= \frac{1}{N!}\left\{ 8 \pi V \left( \frac{kT}{hc} \right)^3\right\}
+		Q_N(V,T)= \frac{1}{N!}\left\{ 8 \pi V \left( \frac{kT}{hc} \right)^3\right\}^N
 	\end{equation*}
 
 	From $Q_N(V,T)$, it's easy to calculate:
@@ -187,6 +187,19 @@ For classical ideal gas
 		U = -\frac{1}{Q} \frac{\partial Q}{\partial \beta}=3NkT\\
 		\gamma = \frac{4}{3}
 	\end{gather*}
+
+
+	As stated in section 3.4, $g(E) $ can be obtained from the inverse Laplace transform, i.e.,
+	\begin{equation*}
+		g(E)=\frac{1}{2 \pi i}\int_{\beta'-i\infty}^{\beta'+i\infty} e^{\beta E} Q(\beta)d \beta
+	\end{equation*}
+	in our case, $Q(\beta)=Q_N(V, T) $, hence
+	\begin{eqnarray*}
+		g(E) &=& \frac{1}{2 \pi i}\int_{\beta'-i\infty}^{\beta'+i\infty} e^{\beta E} Q(\beta)d \beta\\
+		&=& \frac{(8 \pi  V)^N}{N!(hc)^{3N} } \text{Res}\left[ \frac{e^{\beta E}}{\beta^{3N}} \right]_{\beta=0}\\
+		&=& \frac{(8 \pi  V)^N E^{3N-1}}{N!(3N-1)!(hc)^{3N} }
+	\end{eqnarray*}
+
 
 % section problem_3_15 (end)
 \section*{Problem 3.17}
