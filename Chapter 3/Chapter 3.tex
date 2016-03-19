@@ -16,19 +16,19 @@
 \linespread{1.1}
 
 %%%%%%%
-%ç¬¬ä¸‰ç« ä¹ é¢˜å®‰æ’:
+%µÚÈıÕÂÏ°Ìâ°²ÅÅ:
 %%%%%%%
-%å®‹å¿—åš 1,2,3,4
-%å®‹ç››é›¨å¤® 10,20,30,40
-%é™ˆåšæ–‡ 11,21,31,41
-%è§£æ”¾ 12,22,32,42
-%è¾œæ™¨æ›¦ 13,23,33,43
-%é²äº¦æ¾„ 14,24,34,44
-%è’‹æ–‡éŸ¬ 5,15,25,35
-%æå˜‰ç› 6,16,26,36
-%é¢œå…¬æœ› 7,17,27,37
-%å¼ ä¼ å¤ 8,18,28,38
-%ç‹å¿—å‡Œ 9,19,29,39
+%ËÎÖ¾¼á 1,2,3,4
+%ËÎÊ¢ÓêÑë 10,20,30,40
+%³Â²©ÎÄ 11,21,31,41
+%½â·Å 12,22,32,42
+%¹¼³¿êØ 13,23,33,43
+%±«Òà³Î 14,24,34,44
+%½¯ÎÄèº 5,15,25,35
+%Àî¼Îè¡ 6,16,26,36
+%ÑÕ¹«Íû 7,17,27,37
+%ÕÅ´«À¤ 8,18,28,38
+%ÍõÖ¾Áè 9,19,29,39
 
 \author{SM-at-THU}
 \title{\bf{Solutions to Pathria's Statistical Mechanics}\\Chapter 3}
@@ -59,7 +59,7 @@
 \section*{Problem 3.7}
 
  \section*{Problem 3.9}
- 	For an ideal monaomic gas,its heat capacity C would be 3R/2.While asume the whole progress is quasistatic,it would obey 
+ 	For an ideal monaomic gas,its heat capacity C would be 3R/2.While asume the whole progress is quasistatic,it would obey
  	\begin{equation*}
 		pV=RT
 	\end{equation*}
@@ -111,7 +111,7 @@
 	&=&\frac{5Nk}{2} + Nk\ln\left[\frac{1}{N}\left(\frac{2\pi mkT}{h^2}\right)^{3/2}e^{\frac{\overline{U}}{NkT}}\left(\int\prod_i d^3x_i e^{-\beta U(\mathbf{x}_i)}\right)^{1/N}\right] \nonumber\\
 	&=&Nk\left\{\frac{5}{2}+ \ln \left[\frac{\overline{V}}{N}\left(\frac{2\pi mkT}{h^2}\right)^{3/2}\right]\right\}
 	\end{eqnarray}
-	Up till now we have shown the entropy of such a system. So if the potential energy is just a constant, the ``free volume'' is the common volume of classical ideal gas. 
+	Up till now we have shown the entropy of such a system. So if the potential energy is just a constant, the ``free volume'' is the common volume of classical ideal gas.
 
 	Then consider about the hard sphere gas. The potential energy is:
 	$$
@@ -170,6 +170,51 @@
 	\end{gather*}
 
 % section problem_3_15 (end)
+
+\section*{Problem 3.16}
+
+    We can get the partition function of the system by utilizing equation $(3.5.5)$:
+    \begin{equation}
+        Q_N(V,T)=\frac{1}{N! h^{3N}}\int e^{-\beta H(q,p)}d\omega
+        \label{JC_Li_001}
+    \end{equation}
+    Since the particles in this system obey the energy-momentum relationship $\epsilon=pc$, and the particles can only move in one dimension,  equation.\eqref{JC_Li_001} becomes:
+    \begin{equation}
+        Q_N(L,T)=\frac{1}{(3N)! h^{3N}}\int e^{-\beta |p|c}d^{3N}p d^{3N}x
+    \end{equation}
+    Then we can get the partition function:
+    \begin{equation}
+        Q_N(V,T)=\frac{1}{(3N)!}\left[2L\frac{kT}{hc}\right]^{3N}
+        \label{JC_Li_002}
+    \end{equation}
+    And we can study the thermodynamics of this system:
+    $$
+        P=\frac{1}{\beta} \frac{\partial \ln Q}{\partial L} = \frac{3 N}{V}kT
+    $$
+    $$
+        U = - \frac{\partial \ln Q}{\partial \beta}=3NkT
+    $$
+    $$
+        \gamma = \frac{4}{3}
+    $$
+
+    Using the inversion formula $(3.4.7)$, we can derive an expression of the density of states $g(E)$. From equation $(3.4.7)$:
+    \begin{equation}
+    \begin{aligned}
+        g(E)&=\frac{1}{2\pi i}\int_{\beta'-i\infty}^{\beta'+i\infty}e^{\beta E}Q(\beta)d\beta\\
+            &=\frac{1}{2\pi i}\int_{\beta'-i\infty}^{\beta'+i\infty}\frac{1}{(3N)!}\left[\frac{2L}{hc}\right]^{3N}\frac{e^{\beta E}}{\beta^{3N}}d\beta
+    \end{aligned}
+        \label{JC_Li_003}
+    \end{equation}
+    Since the integrand have only one singularity, $\beta=0$, we can calculate this integration by using Residue Theorem:
+    \begin{equation}
+    \begin{aligned}
+        g(E)&=\frac{1}{2\pi i}\frac{E^{3N-1}}{(3N)!}\left[\frac{2L}{hc}\right]^{3N}\int_{\beta'-i\infty}^{\beta'+i\infty}\frac{e^{\beta E}}{(\beta E)^{3N}}d(\beta E)\\
+            &=\frac{1}{2\pi i}\frac{E^{3N-1}}{(3N)!}\left[\frac{2L}{hc}\right]^{3N}\int_{\beta'-i\infty}^{\beta'+i\infty}\frac{1}{(\beta E)^{3N}}\sum_{j=0}^{\infty}\frac{E^j}{j!} d(\beta E)\\
+            &=\frac{1}{2\pi i}\frac{E^{3N-1}}{(3N)!(3N-1)!}\left[\frac{2L}{hc}\right]^{3N}
+    \end{aligned}
+        \label{JC_Li_004}
+    \end{equation}
 
 \section*{Problem 3.19}
 	\begin{equation*}
@@ -240,7 +285,7 @@
 	$$
 	\boldsymbol{\nu_0}=-3PV
 	$$
-	Let's consider the interaction between the particles and walls of container. 
+	Let's consider the interaction between the particles and walls of container.
 	$$
 	\boldsymbol{\nu_0}=-P\mathlarger{\int}(\nabla\cdot\boldsymbol{ r})dV=-3PV
 	$$
@@ -281,7 +326,7 @@
 	&U =  N \varepsilon \frac{e^{-\varepsilon/kT}}{1+e^{-\varepsilon/kT}} \\
 	&C_{p} = C_{V} =  \frac{N \varepsilon^{2} e^{-\varepsilon/kT}}{kT^{2} (1+e^{-\varepsilon/kT})^{2}}
 	\end{align}
-	This specific heat is sometimes referred to \emph{Schottky anomaly}. 
+	This specific heat is sometimes referred to \emph{Schottky anomaly}.
 
 \section*{Problem 3.32}
 	\paragraph{(a)} Since the distribution is given by canonical distribution, the probabilities are:
@@ -319,7 +364,7 @@
 \label{sec:problem_3_33}
 	Let's consider parameter $\frac{\mu H}{kT}$.\\
 	If you plot the Langevin's function:
-	$$L(x)=coth(x)-\frac{1}{x}$$ 
+	$$L(x)=coth(x)-\frac{1}{x}$$
 	You will find when $\frac{\mu H}{kT}=5.12$ magnetic moment is saturated.\\
 % section problem_3_33 (end)
 
@@ -366,7 +411,7 @@
 	\begin{equation}
 		\left\{
 		\begin{aligned}
-		\overset{.} 
+		\overset{.}
 		{N_+}/{N}=\frac{1}{1+\exp(-\beta g \mu_b H)}\\
 		{N_-}/{N} =\frac{\exp(-\beta g \mu_b H)}{1+\exp(-\beta g \mu_b H)}\\
 		\end{aligned}
@@ -376,7 +421,7 @@
 	\begin{equation}
 		\left\{
 		\begin{aligned}
-		\overset{.} 
+		\overset{.}
 		{N_+}/{N}=50.00168\%\\
 		{N_-}/{N} =49.99832\%\\
 		\end{aligned}
@@ -423,7 +468,7 @@
 	The hamiltonian of the system is :
 	$$\boldsymbol{H}=e\phi (\boldsymbol{q})+\frac{1}{2m_e}\sum_{i=1}^{N}(\boldsymbol{P_i}-\frac{e}{c}\boldsymbol{A_i})^2$$
 	$$\dot{q_i}=-\frac{\partial{H}}{\partial{p_i}}\propto p_i$$
-	On the other hand 
+	On the other hand
 	$$\vec\mu=\frac{e}{2c}\vec{r}\times\vec{v}=\sum_{i=1}^{N}\vec{a_i}\cdot \dot{q_i}$$
 	$a_i$ are vector coefficients depending on the position coordinates.
 	$$\overline\mu=\frac{\mathlarger{\int}\mu*d\omega}{\mathlarger{\int}d\omega}\propto\mathlarger{\int_{ - \infty }^{ + \infty }}p*dp=0$$
