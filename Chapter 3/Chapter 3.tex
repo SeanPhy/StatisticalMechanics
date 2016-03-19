@@ -57,6 +57,17 @@
 \section*{Problem 3.6}
 
 \section*{Problem 3.7}
+\begin{eqnarray*}
+C_p-C_V=(\frac{\partial H}{\partial T})_p-(\frac{\partial E}{\partial T})_V   \qquad\quad\\
+=(\frac{\partial (E+pV)}{\partial T})_p-(\frac{\partial E}{\partial T})_V   \\
+=p (\frac{\partial V}{\partial T})_p+(\frac{\partial E}{\partial V})_{\beta}(\frac{\partial V}{\partial T})_p  \\
+=(\frac{\partial V}{\partial T})_p (p+(\frac{\partial E}{\partial V})_{\beta} ) \qquad \\
+=-\frac{(\frac{\partial p}{\partial T})_V}{(\frac{\partial p}{\partial V})_T}(p-\frac{\partial^2 lnQ}{\partial \beta \partial V})  \quad \\
+=-\frac{k(\beta \frac{\partial^2 ln Q}{\partial \beta \partial V}-\frac{\partial lnQ}{\partial V})^2}{(\frac{\partial^2 lnQ}{\partial V^2})_{\beta}} \quad\\
+=desired \ formula.\qquad 
+\end{eqnarray*}
+As for classical ideal gas, $(\frac{\partial E}{\partial V})_{\beta}=0$, $pV=NkT$, we soon get that the above result is Nk.
+
 
 \section*{Problem 3.8}
 For classical ideal gas
@@ -178,7 +189,14 @@ For classical ideal gas
 	\end{gather*}
 
 % section problem_3_15 (end)
-
+\section*{Problem 3.17}
+\begin{eqnarray*}
+\int [U-H(p,q)]e^{-\beta H(p,q)}d\omega=0 \\
+\Rightarrow \int [\frac{\partial U}{\partial \beta}-H(p,q)U+H^2(p,q)]e^{-\beta H(p,q)}d\omega=0 \\
+\Rightarrow \int [\frac{\partial U}{\partial \beta}-U^2+H^2(p,q)]e^{-\beta H(p,q)}d\omega=0  \\
+\Rightarrow \langle H^2\rangle-U^2=-\frac{\partial U}{\partial \beta}
+\end{eqnarray*}
+That is the desired equation.
 \section*{Problem 3.18}
 \begin{eqnarray*}
 \langle(\Delta E)^3\rangle&=&\langle E^3-2E^2\langle E\rangle +2E\langle E\rangle ^2-\langle E\rangle ^3\rangle \\&=&\langle E^3\rangle -2\langle E^2\rangle \langle E\rangle +\langle E\rangle^3
@@ -290,7 +308,21 @@ We have
 	\end{equation*}
 	for noninteracting systems.
 % section problem_3_25 (end)
-
+\section*{Problem 3.27}
+\begin{eqnarray*}
+g(E)=\frac{1}{2 \pi}\int_{-\infty}^{+\infty} e^{(\beta +i\gamma)(E-(N/2)\hbar\omega)}(1-e^{-\hbar\omega(\beta +i\gamma)})^{-N}d\gamma  \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \quad\\
+=\frac{1}{2 \pi}\int_{-\infty}^{+\infty} e^{(\beta +i\gamma)(E-(N/2)\hbar\omega)}(1+C_N^1e^{-\hbar\omega(\beta +i\gamma)}+C_{N+1}^2e^{-2\hbar\omega(\beta +i\gamma)}+C_{N+2}^3e^{-3\hbar\omega(\beta +i\gamma)}+...)d\gamma  \\
+=\sum_{k=0}^{\infty}\delta(E-(N/2)\hbar\omega-k\hbar\omega)C_{N+k-1}^{k}  \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\end{eqnarray*}
+The above result is the same as that derived from direct state counting for N distinguishable quantum SHOs. Assume $ E=(m+N/2)\hbar\omega $, then we have:
+\begin{eqnarray*}
+S=k\ln(g(E)dE)=k\ln(C_{N+m-1}^m)
+\end{eqnarray*}
+while $m\gg1$, $N\gg1$, using the Stiring formula we can find:
+\begin{eqnarray*}
+S\approx k(m\ln{\frac{N+m-1}{m}}+(N-1)\ln{\frac{N+m-1}{N-1}})\approx Nk(\frac{m+N}{N}\ln{\frac{m+N}{N}}-\frac{m}{N}\ln{\frac{m}{N}})
+\end{eqnarray*}
+which is the desired formula.
 \section*{Problem 3.28}
 \subsection*{a)}
 Define
@@ -407,7 +439,8 @@ where $\beta=3N/2E$.
 
 	Once $Q_N$ is obtained, all thermodynamics of the system can be obtained. I forget the definition of electric polarization, etc. I hope you can obtain them from $Q_N$ by yourself.
 % section problem_3_35 (end)
-
+\section*{Problem 3.37}
+Prof.Ni's ppt has given a detailed and complete solution to this problem. If someone regards it worthwhile I will renew this text later.
 \section*{Problem 3.38}
 As defined in the problem, we examine the patition function
 \begin{eqnarray*}
