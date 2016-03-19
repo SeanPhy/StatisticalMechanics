@@ -1,0 +1,270 @@
+\documentclass{article}
+\title{Lecture Notes on Statistical Mechanics(4)}
+\author{Yuyang}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\begin{document}
+\maketitle
+\section{The Grand Canonical Ensemble}
+\subsection{Motivation}
+We consider the equilibrium between a system and a particle-energy reservoir.
+\begin{center}     
+\includegraphics[width=5in]{1.PNG}  
+\end{center}
+
+\begin{equation}
+N_r+N'_r=N^{(0)} \ \  E_s+E'_s=E^{(0)}
+\end{equation}
+
+\begin{equation}
+P_{r,s} \propto \Omega'_(N^{(0)}-N_r,E^{(0)}-E_r)
+\end{equation}
+If we assume that $E_r$ and $N_r$ are small compared to $E^{(0)}$ and $N^{(0)}$, we can deduce that
+\begin{equation}
+\mathrm{ln}\Omega'(N^{(0)}-N_r,E^{(0)}-E_r) \approx \mathrm{ln}\Omega'(N^{(0)},E^{(0)}) + \frac{\mu'}{kT'}N_r-\frac{1}{kT'}E_s 
+\end{equation} 
+Thus,
+\begin{equation}
+P_{r,s} \propto \mathrm{exp}(-\alpha N_r-\beta E_s) \  \ \ (\alpha=\frac{\mu}{kT} , \beta=\frac{1}{kT})
+\end{equation}
+After normalization
+\begin{equation}
+P_{r,s}=\frac{\mathrm{exp}(-\alpha N_r-\beta E_s)}{\sum_{r,s} \mathrm{exp}(-\alpha N_r-\beta E_s)}
+\end{equation}
+
+\subsection{From Statistical Mechanics To Thermal Dynamics}
+\begin{equation}
+\langle N \rangle =\frac{\sum_{r,s} N_r \mathrm{exp}(-\alpha N_r-\beta E_s) }{\sum_{r,s} \mathrm{exp}(-\alpha N_r-\beta E_s)} = -\frac{\partial}{\partial \alpha} \left\{ \mathrm{ln}\sum_{r,s} \mathrm{exp}(-\alpha N_r-\beta E_s) \right \}
+\end{equation}
+
+\begin{equation}
+\langle E \rangle =\frac{\sum_{r,s} E_s \mathrm{exp}(-\alpha N_r-\beta E_s) }{\sum_{r,s} \mathrm{exp}(-\alpha N_r-\beta E_s)} = -\frac{\partial}{\partial \beta} \left\{ \mathrm{ln}\sum_{r,s} \mathrm{exp}(-\alpha N_r-\beta E_s) \right \}
+\end{equation}
+
+\begin{equation}
+S= k\langle \mathrm{ln} P_{r,s} \rangle = k(\mathrm{ln} \sum_{r,s} \mathrm{exp}(-\alpha N_r-\beta E_s) +\alpha N +\beta E)
+\end{equation}
+If we define $q= \mathrm{ln} \sum_{r,s} \mathrm{exp}(-\alpha N_r-\beta E_s)$,than we have
+\begin{equation}
+q=\frac{TS+\mu N -E}{kT}
+\end{equation}
+and $-kTq$ is just the canonical potential we defined in thermal dynamics.
+
+\subsection{Fluctuation}
+Differentiate equation(6) with $\alpha$ to get
+\begin{equation}
+\left(\frac{\partial \langle N \rangle}{\partial \alpha}\right)_{\beta,E_s} = -\langle N^2 \rangle +\langle N \rangle ^2 
+\end{equation}
+So,
+\begin{equation}
+\langle (\Delta N)^2 \rangle = \langle N^2 \rangle - \langle N \rangle ^2 = - \left(\frac{\partial \langle N \rangle}{\partial \alpha}\right)_{T,V}=kT \left(\frac{\partial \langle N \rangle}{\partial \mu}\right)_{T,V}
+\end{equation}
+
+\begin{equation}
+\frac{\langle (\Delta N)^2 \rangle}{\langle N \rangle ^2} = \frac{kT}{\langle N \rangle ^2} \left(\frac{\partial \langle N \rangle}{\partial \mu}\right)_{T,V} = -\frac{kT}{V} \left(\frac{\partial v}{\partial \mu}\right)_{T}= -\frac{kT}{V} \frac{1}{v}  \left(\frac{\partial v}{\partial P}\right)_{T} =
+-\frac{kT}{V} \kappa_{T}
+\end{equation}
+Similarly, we can get 
+\begin{equation}
+\langle (\Delta E)^2 \rangle = \langle E^2 \rangle - \langle E \rangle ^2 = - \left(\frac{\partial \langle E \rangle}{\partial \beta}\right)_{z,V}=kT^2 \left(\frac{\partial U}{\partial T}\right)_{z,V}
+\end{equation}
+Here, $z=\mathrm{e}^{-\alpha}$ is called fugacity.
+\begin{equation}
+\left(\frac{\partial U}{\partial T}\right)_{z,V} = \left( \frac{\partial U}{\partial T}\right)_{N,V}
++ \left( \frac{\partial U}{\partial N}\right)_{T,V}\left(\frac{\partial N}{\partial T}\right)_{z,V} 
+\end{equation}
+As indicated by equation (6) and (7), we can prove that 
+\begin{equation}
+\left(\frac{\partial N}{\partial \beta}\right)_{\alpha,V} =\left(\frac{\partial U}{\partial \alpha}\right)_{\beta,V}
+ \end{equation} 
+So, 
+\begin{equation}
+\left(\frac{\partial N}{\partial T}\right)_{z,V} =\frac{1}{T} \left(\frac{\partial U}{\partial \mu}\right)_{T,V}
+\end{equation}
+\begin{equation}
+\langle (\Delta E)^2 \rangle = kT^2C_V + kT \left(\frac{\partial U}{\partial N}\right)_{T,V} \left(\frac{\partial U}{\partial \mu}\right)_{T,V}
+\end{equation}
+
+\begin{equation}
+\langle (\Delta E)^2 \rangle  = \langle (\Delta E)^2 \rangle_{can} + \left \{\left(\frac{\partial U}{\partial N}\right)_{T,V} \right\}^2  \langle (\Delta N)^2 \rangle
+\end{equation}
+
+\subsection{Examples}
+\paragraph{Ideal gas}
+\paragraph{Phase transition}
+
+\section{Formulation of Quantum Statistics}
+
+\subsection{The density matrix}
+Consider an ensemble of $\mathcal{N}$ identical system which characterized by a common Hamiltonian$\widehat{N}$.
+\paragraph{Basic Equation of Quantum Mechanics}
+\begin{equation}
+\widehat{H} \psi^k(t) = i \hbar \dot{\psi}^k(t)
+\end{equation}
+\begin{equation}
+ \psi^k(t) =\sum_n a_n^k(t) \phi(n)
+\end{equation}
+\begin{equation}
+i \hbar \dot{a}_n^k(t) = \sum H_{nm} a_m^k(t) \ \ \ \ \ H_{nm}=\int \phi^*_n \widehat{H} \phi_m d\tau
+\end{equation}
+
+\paragraph{Density operator}
+\begin{equation}
+\rho_{mn}(t) = \frac{1}{\mathcal{N}} \sum_{k=1}^{\mathcal{N}} a_m^k(t) a_n^{k*}(t)
+\end{equation}
+The matrix element $\rho_{mn}$ is the ensemble average of the quantity $a_m^k(t) a_n^{k*}(t)$.
+The quantity $\rho_{nn}$ represents the probability that a system, chosen at random form the ensemble, at time t, is found to be in the state $\phi_n$.
+
+\paragraph{Dynamics of density operator}
+\begin{equation}
+i \hbar \dot{\widehat{\rho}} = [\widehat{H},\widehat{\rho}]
+\end{equation}
+In classical mechanics, we have Liouville's theorem,
+\begin{equation}
+\frac{d \rho}{dt} = \frac{\partial \rho}{\partial t} + \left\{ \rho, H\right\}=0
+\end{equation}
+
+\paragraph{State of equilibrium}
+\begin{equation}
+\dot{\widehat{\rho}}= 0 \ \ \ \ [\widehat{H},\widehat{\rho}] =0 
+\end{equation}
+corollary:(?)
+\begin{equation}
+\widehat{\rho}= \widehat{\rho}(\widehat{H})  \ \ \ \  \dot{\widehat{H}}=0 
+\end{equation}
+If $\phi_n$ are the eigenfunctions of $\widehat{H}$, then 
+\begin{equation}
+H_{mn}=E_n \delta_{mn} \ \ \ \ \  \rho_{mn} = \rho_{n} \delta_{mn}
+\end{equation}
+In general case,we have detailed balancing (?),
+\begin{equation}
+\rho_{mn} = \rho_{nm}
+\end{equation}
+
+\paragraph{expectation value of physical quantity $G$}
+\begin{equation}
+\langle G \rangle = \mathrm{Tr}(\widehat{\rho} \widehat{G})
+\end{equation}
+
+\subsection{Various Ensembles in Quantum Statistics}
+\subsubsection{The Microcanonical Ensemble}
+\paragraph{equal a priori probabilities}
+In energy representation:
+\begin{equation}
+\rho_{mn}=\rho_n \delta_{mn}
+\end{equation}
+
+\begin{eqnarray}&&
+ \rho_n =\left\{\begin{array}{cc}
+ \frac{1}{\Gamma}          & \mathrm{for \  each \ accessible \ states}       \\
+ 0       &  \mathrm{for \  all \ other \ states}      \\
+ \end{array} \right.
+ \end {eqnarray}
+$\Gamma=1$ : Pure States \\
+$\Gamma>1$ : mixed States \\
+
+\paragraph{random a priori probabilities} The motivation of \emph{random a priori probabilities} principle is to ensure the equation (30) and (31) can hold in any other representation.
+\begin{equation}
+\rho_{mn}=\frac{1}{\mathcal{N}} \sum_{k=1}^{\mathcal{N}} a_m^k a_n^{k*} =\frac{1}{\mathcal{N}} \sum_{k=1}^{\mathcal{N}} |a|^2 \mathrm{e}^{i(\theta_m^k -\theta_n^k)} = c \langle \mathrm{e}^{i(\theta_m^k -\theta_n^k)} \rangle = c \delta_{mn}
+\end{equation}
+\subsubsection{The Canonical Ensemble}
+In energy representation,
+\begin{equation}
+\rho_{mn}=\rho_n \delta_{mn}
+\end{equation}
+
+\begin{equation}
+\rho_{n} =  \frac{\mathrm{exp}(-\beta E_n)}{\sum_n \mathrm{exp}(-\beta E_n)} = \frac{\mathrm{exp}(-\beta E_n)}{Q_N(\beta)}
+\end{equation}
+
+In general case,we can show that
+\begin{equation}
+\widehat{\rho}= \frac{\mathrm{e}^{-\beta \widehat{H}}}{\mathrm{Tr}(\mathrm{e}^{-\beta \widehat{H}})}
+\end{equation}
+\begin{equation}
+\langle G \rangle = \frac{\mathrm{Tr}(\widehat{G} \mathrm{e}^{-\beta \widehat{H}})}{\mathrm{Tr}(\mathrm{e}^{-\beta \widehat{H}})}
+\end{equation}
+
+\subsubsection{The Grand Canonical Ensemble}
+In energy representation,
+\begin{equation}
+\rho_{mn}=\rho_n \delta_{mn}
+\end{equation}
+
+\begin{equation}
+\rho_{n} =  \frac{\mathrm{exp}(-\beta (E_s-\mu N_r))}{\sum_{r,s} \mathrm{exp}(-\beta (E_s-\mu N_r))} = \frac{\mathrm{exp}(-\beta (E_s-\mu N_r))}{\mathcal{Q}(\mu,V,T)}
+\end{equation}
+
+In general case,we can show that
+\begin{equation}
+\widehat{\rho}= \frac{\mathrm{e}^{-\beta (\widehat{H}-\mu \widehat{n})}}{\mathrm{Tr}(\mathrm{e}^{-\beta (\widehat{H}-\mu \widehat{n})})}
+\end{equation}
+\begin{equation}
+\langle G \rangle = \frac{\mathrm{Tr}(\widehat{G} \mathrm{e}^{-\beta (\widehat{H}-\mu \widehat{n})})}{\mathrm{Tr}(\mathrm{e}^{-\beta (\widehat{H}-\mu \widehat{n})})}
+\end{equation}
+
+\subsection{Examples}
+\paragraph{An electron in a magnetic field}
+\paragraph{A free particle in a box}
+\paragraph{A linear harmonic oscillator}
+
+\subsection{Systems Composed of Indistinguishable  Non-interacting Particles}
+\paragraph{Basic equations}
+\begin{equation}
+\widehat{H} (\mathbf{q},\mathbf{p}) = \sum_{i=1}^{N} \widehat{H}_{i} (q_i,p_i)
+\end{equation}
+
+\begin{equation}
+\widehat{H} \psi_E(\mathbf{q}) = E \psi_E(\mathbf{q})
+\end{equation}
+
+So,we can decompose the wave function as
+\begin{equation}
+\psi_E(\mathbf{q}) = \prod_{i=1}^{N} u_{\epsilon_i}(q_i)
+\end{equation}
+Here,
+\begin{equation}
+E=\sum_{i=1}^{N} \epsilon_i \ \ \ \  \widehat{H}_i u_{\epsilon_i}(q_i)=\epsilon_i u_{\epsilon_i}(q_i)
+\end{equation}
+
+\paragraph{Particles are all identical!}
+\[(n_1,n_2,\cdots,n_r)  \ \  (\sum_{i=1}n_i =N \ \ \sum_{i=1}n_i\epsilon_i =E )\] 
+In quantum statistical mechanics, the above formula describe one particular states due to the identical principle. But in classical statistical mechanics, the above formula includes $\frac{N!}{n_1!n_2!\cdot}$
+states. After the correction of Gibbs,  the above formula includes  $\frac{1}{n_1!n_2!\cdot}$ states, which can only be right if $n_i=0$ or $1$ almost. 
+
+\paragraph{Bosons and Fermions}
+The identical principle can be represented as the permutation invariants  of wave functions. Since only the norm of the wave function is important in probability interpretation. So there are two kinds of  permutation invariants. \\
+Symmetry:
+\begin{equation}
+P \psi = \psi \ \ \ \ \mathrm{for\  all \ P}
+\end{equation}
+Antisymmetry:
+\begin{eqnarray}&&
+ P \psi =\left\{\begin{array}{cc}
+ +\psi       & \mathrm{even \ permutation}       \\
+ -\psi       & \mathrm{odd \ permutation}      \\
+ \end{array} \right.
+\end {eqnarray}
+The wave function of bosons is symmetric:
+\begin{equation}
+\psi_S(\mathbf{q})= \mathrm{const.} \sum_P P \psi_{Boltz}(\mathbf{q})
+\end{equation}
+So,for Bose-Einstein statistics:
+\begin{equation}
+ W_{B.E.} \{n_i\} =1 ; \ \ \ n_i=0,1,2\cdots
+ \end{equation} 
+ The wave function of fermions is symmetric:
+\begin{equation}
+\psi_A(\mathbf{q})= \mathrm{const.} \sum_P \delta_P P \psi_{Boltz}(\mathbf{q})
+\end{equation}
+So,for Fermi-Dirac statistics:
+ \begin{eqnarray}&&
+ W_{F.D.} \psi =\left\{\begin{array}{cc}
+ +1   & \mathrm{if} \ \sum_i n_i^2=N    \\
+ 0    & \mathrm{if} \ \sum_i n_i^2>N    \\
+ \end{array} \right.
+ \end {eqnarray}
+ 
+ \subsection{The Density Matrix and the Partition Function of a System of Free Particles}
+ I still find something confusing in this section, so I will discuss it in details in the afternoon, and the lecture notes of this part will be finished later.
+\end{document}
