@@ -58,6 +58,14 @@
 
 \section*{Problem 3.7}
 
+\section*{Problem 3.8}
+For classical ideal gas
+\begin{eqnarray*}
+\ln\left(\frac{Q_1}{N}\right)+T\left(\frac{\partial \ln Q_1}{\partial T}\right)_P&=&\ln\left\{\frac{V}{h^3N}(2\pi mkT)^{3/2}\right\}+T\frac{\partial}{\partial T}\ln\left\{\frac{N}{h^3P}(2\pi m)^{3/2}(kT)^{3/5}\right\}\\
+&=&\ln\left\{\frac{V}{N}(\frac{2\pi mkT}{h^2})^{3/2}\right\}+\frac{5}{2}\\
+&=&\frac{S}{Nk}
+\end{eqnarray*}
+
  \section*{Problem 3.9}
  	For an ideal monaomic gas,its heat capacity C would be 3R/2.While asume the whole progress is quasistatic,it would obey 
  	\begin{equation*}
@@ -171,6 +179,26 @@
 
 % section problem_3_15 (end)
 
+\section*{Problem 3.18}
+\begin{eqnarray*}
+\langle(\Delta E)^3\rangle&=&\langle E^3-2E^2\langle E\rangle +2E\langle E\rangle ^2-\langle E\rangle ^3\rangle \\&=&\langle E^3\rangle -2\langle E^2\rangle \langle E\rangle +\langle E\rangle^3
+\end{eqnarray*}
+Considering the relations below
+\begin{eqnarray*}
+\langle E\rangle &=&\frac{E_r\mathrm{exp}(-\beta E_r)}{\mathrm{exp}(-\beta E_r)}\\
+\langle E^2\rangle &=&\frac{E_r^2\mathrm{exp}(-\beta E_r)}{\mathrm{exp}(-\beta E_r)}
+\end{eqnarray*}
+\begin{equation*}
+C_V=\frac{\langle E^2\rangle-\langle E\rangle^2}{kT^2}
+\end{equation*}
+\begin{equation*}
+k^2\left\{T^4\left(\frac{\partial C_V}{\partial T}\right)_V+2T^3C_V\right\}=-\frac{1}{\beta^2}\frac{\partial}{\partial \beta}\left\{\beta^2(\langle E^2\rangle-\langle E\rangle^2)\right\}+\frac{2}{\beta}(\langle E^2\rangle-\langle E^2\rangle)\\
+\end{equation*}
+We have
+\begin{equation*}
+\langle E^3\rangle=k^2\left\{T^4\left(\frac{\partial C_V}{\partial T}\right)_V+2T^3C_V\right\}
+\end{equation*}
+
 \section*{Problem 3.19}
 	\begin{equation*}
 		<\frac{dG}{dt}>=<\sum p_i \frac{dq_i}{dt}>+<\sum q_i \frac{dp_i}{dt}>=0
@@ -263,6 +291,44 @@
 	for noninteracting systems.
 % section problem_3_25 (end)
 
+\section*{Problem 3.28}
+\subsection*{a)}
+Define
+\begin{equation*}
+R=\left(E-\frac{1}{2}N\hbar\omega\right)\Bigg/\hbar\omega
+\end{equation*}
+Number of states avaliable for the whole system is
+\begin{equation*}
+m_0=\frac{(R+N-1)!}{R!(N-1)!}
+\end{equation*}
+Number of states avaliable for a particular oscillator in state n
+\begin{equation*}
+m=\frac{(R+N-1-n-1)!}{(R-n)!(N-1)!}
+\end{equation*}
+Probability
+\begin{equation*}
+p_n=\frac{m}{m_0}=\frac{R(R-1)\cdots(R-n+1)(N-1)}{(R+N-1)\cdots(R+N-1-n-1)}
+\end{equation*}
+for $N\gg 1$ and $R\gg n$
+\begin{equation*}
+p_n\approx \frac{(\bar n)^n}{(\bar n+1)^{n+1}}
+\end{equation*}
+where $\bar n=R/N$
+\subsection*{b)}
+The number of states avaliable for total energy E and N particles are
+\begin{equation*}
+g(E,N)=\frac{1}{N!}(\frac{V}{h^3})^N\frac{(2\pi m )^{3N/2}}{(3N/2-1)!}E^{3N/2-1}
+\end{equation*}
+Probability
+\begin{equation*}
+p=\frac{g(E-\epsilon,N-1)}{g(E,N)}
+\end{equation*}
+For $N\ll1$ and $E\ll\epsilon$
+\begin{equation*}
+p\propto\left(\frac{E-\epsilon}{E}\right)^{3N/2}\approx \mathrm{exp}(-\beta \epsilon)
+\end{equation*}
+where $\beta=3N/2E$.
+
 \section*{Problem 3.29}
 	I can't solve this problem.The intergral of the unharnomic terms in the partition fuction is infinite.
 	
@@ -342,6 +408,18 @@
 	Once $Q_N$ is obtained, all thermodynamics of the system can be obtained. I forget the definition of electric polarization, etc. I hope you can obtain them from $Q_N$ by yourself.
 % section problem_3_35 (end)
 
+\section*{Problem 3.38}
+As defined in the problem, we examine the patition function
+\begin{eqnarray*}
+Q_1(\beta)&=&\int_{-J}^J\mathrm{exp}(\beta g \mu_BmH)\\
+&=&\frac{1}{\beta g \mu_BH}(\mathrm{exp}(\beta g \mu_BJH)-\mathrm{exp}(\beta g \mu_B JH))
+\end{eqnarray*}
+Choose $x=\beta g \mu_BJH$\\
+Thermal dynamic properties
+\begin{eqnarray*}
+\bar{\mu}_z&=&\frac{1}{\beta}\frac{\partial}{\partial H}\ln Q_1(\beta)\\
+&=&J^2g\mu_B(\coth (x)-\frac{1}{x})
+\end{eqnarray*}
 
 \section*{Problem 3.39}
 	By using equation (3.9.18) we could get
