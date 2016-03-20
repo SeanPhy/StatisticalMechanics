@@ -369,6 +369,54 @@ We have
 	\end{equation*}
 	for noninteracting systems.
 % section problem_3_25 (end)
+
+\section*{Problem 3.26}
+
+    To calculate the multiplicity of an s-dimensional oscillator, we can write the energy eigenvalues in this form:
+    \begin{equation}
+        \epsilon_j=(j+s/2)\hbar \omega=(\sum_{i=1}^s n_i+s/2)\hbar \omega
+    \end{equation}
+    Where $n_i$ is the ``eigenvalues'' of each dimension. And $n_i$ can be a integer between $0$ to $j$, just have to obey $\sum_{i=1}^s n_i=j$. So this problem is equivalent to putting $s-1$ ``clapboards'' between $N$ particles. Hence we can get the multiplicity:
+    \begin{equation}
+        m_j=\frac{(j+s-1)!}{j!(s-1)!}
+    \end{equation}
+    Then we can get the partition function of a single oscillator:
+    \begin{equation}
+    \begin{aligned}
+        Q_1&=\sum_j m_j \exp\left(-\beta \epsilon_j\right)\\
+            &=\frac{(j+s-1)!}{j!(s-1)!}\exp\left[-\beta (j+s/2)\hbar \omega\right]\\
+            &=\left[\frac{\exp (-\beta\hbar \omega/2)}{1-\exp (-\beta \hbar \omega)}\right]^s
+    \end{aligned}
+    \end{equation}
+    The partition function of a system of N oscillators is:
+    \begin{equation}
+        Q_N=Q_1^N=\left[\frac{\exp (-\beta\hbar \omega/2)}{1-\exp (-\beta \hbar \omega)}\right]^{sN}
+        \label{JC_Li_005}
+    \end{equation}
+    We can study the thermodynamics of this system from equation.\eqref{JC_Li_005}:
+    And we can study the thermodynamics of this system:
+    $$
+        U = - \frac{\partial \ln Q_N}{\partial \beta}= sN\left[\frac{1}{2}+\frac{1}{1-\exp(-\beta \hbar \omega)}\right]\hbar\omega
+    $$
+    $$
+        \mu_s = - \frac{1}{\beta}\frac{\partial \ln Q_N}{\partial N}= s\left[\frac{\hbar\omega}{2}+\frac{\ln [1-\exp(-\beta \hbar \omega)]}{\beta}\right]
+    $$
+    For a system of sN one-dimensional oscillators:
+    $$
+        Q_{sN}=Q_1^sN=\left[\frac{\exp (-\beta\hbar \omega/2)}{1-\exp (-\beta \hbar \omega)}\right]^{sN}
+    $$
+    $$
+        U = - \frac{\partial \ln Q_N}{\partial \beta}= sN\left[\frac{1}{2}+\frac{1}{1-\exp(-\beta \hbar \omega)}\right]\hbar\omega
+    $$
+    $$
+        \mu_1 = - \frac{1}{\beta}\frac{\partial \ln Q_N}{\partial sN}= \left[\frac{\hbar\omega}{2}+\frac{\ln [1-\exp(-\beta \hbar \omega)]}{\beta}\right]
+    $$
+    And we have:
+    $$
+        \mu_s=s\mu_1
+    $$
+      
+
 \section*{Problem 3.27}
 \begin{eqnarray*}
 g(E)=\frac{1}{2 \pi}\int_{-\infty}^{+\infty} e^{(\beta +i\gamma)(E-(N/2)\hbar\omega)}(1-e^{-\hbar\omega(\beta +i\gamma)})^{-N}d\gamma  \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \quad\\
