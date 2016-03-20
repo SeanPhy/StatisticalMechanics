@@ -64,7 +64,7 @@ C_p-C_V=(\frac{\partial H}{\partial T})_p-(\frac{\partial E}{\partial T})_V   \q
 =(\frac{\partial V}{\partial T})_p (p+(\frac{\partial E}{\partial V})_{\beta} ) \qquad \\
 =-\frac{(\frac{\partial p}{\partial T})_V}{(\frac{\partial p}{\partial V})_T}(p-\frac{\partial^2 lnQ}{\partial \beta \partial V})  \quad \\
 =-\frac{k(\beta \frac{\partial^2 ln Q}{\partial \beta \partial V}-\frac{\partial lnQ}{\partial V})^2}{(\frac{\partial^2 lnQ}{\partial V^2})_{\beta}} \quad\\
-=desired \ formula.\qquad 
+=desired \ formula.\qquad
 \end{eqnarray*}
 As for classical ideal gas, $(\frac{\partial E}{\partial V})_{\beta}=0$, $pV=NkT$, we soon get that the above result is Nk.
 
@@ -202,33 +202,6 @@ For classical ideal gas
 
 
 % section problem_3_15 (end)
-\section*{Problem 3.17}
-\begin{eqnarray*}
-\int [U-H(p,q)]e^{-\beta H(p,q)}d\omega=0 \\
-\Rightarrow \int [\frac{\partial U}{\partial \beta}-H(p,q)U+H^2(p,q)]e^{-\beta H(p,q)}d\omega=0 \\
-\Rightarrow \int [\frac{\partial U}{\partial \beta}-U^2+H^2(p,q)]e^{-\beta H(p,q)}d\omega=0  \\
-\Rightarrow \langle H^2\rangle-U^2=-\frac{\partial U}{\partial \beta}
-\end{eqnarray*}
-That is the desired equation.
-\section*{Problem 3.18}
-\begin{eqnarray*}
-\langle(\Delta E)^3\rangle&=&\langle E^3-2E^2\langle E\rangle +2E\langle E\rangle ^2-\langle E\rangle ^3\rangle \\&=&\langle E^3\rangle -2\langle E^2\rangle \langle E\rangle +\langle E\rangle^3
-\end{eqnarray*}
-Considering the relations below
-\begin{eqnarray*}
-\langle E\rangle &=&\frac{E_r\mathrm{exp}(-\beta E_r)}{\mathrm{exp}(-\beta E_r)}\\
-\langle E^2\rangle &=&\frac{E_r^2\mathrm{exp}(-\beta E_r)}{\mathrm{exp}(-\beta E_r)}
-\end{eqnarray*}
-\begin{equation*}
-C_V=\frac{\langle E^2\rangle-\langle E\rangle^2}{kT^2}
-\end{equation*}
-\begin{equation*}
-k^2\left\{T^4\left(\frac{\partial C_V}{\partial T}\right)_V+2T^3C_V\right\}=-\frac{1}{\beta^2}\frac{\partial}{\partial \beta}\left\{\beta^2(\langle E^2\rangle-\langle E\rangle^2)\right\}+\frac{2}{\beta}(\langle E^2\rangle-\langle E^2\rangle)\\
-\end{equation*}
-We have
-\begin{equation*}
-\langle E^3\rangle=k^2\left\{T^4\left(\frac{\partial C_V}{\partial T}\right)_V+2T^3C_V\right\}
-\end{equation*}
 
 \section*{Problem 3.16}
 
@@ -274,6 +247,36 @@ We have
     \end{aligned}
         \label{JC_Li_004}
     \end{equation}
+
+
+\section*{Problem 3.17}
+\begin{eqnarray*}
+\int [U-H(p,q)]e^{-\beta H(p,q)}d\omega=0 \\
+\Rightarrow \int [\frac{\partial U}{\partial \beta}-H(p,q)U+H^2(p,q)]e^{-\beta H(p,q)}d\omega=0 \\
+\Rightarrow \int [\frac{\partial U}{\partial \beta}-U^2+H^2(p,q)]e^{-\beta H(p,q)}d\omega=0  \\
+\Rightarrow \langle H^2\rangle-U^2=-\frac{\partial U}{\partial \beta}
+\end{eqnarray*}
+That is the desired equation.
+\section*{Problem 3.18}
+\begin{eqnarray*}
+\langle(\Delta E)^3\rangle&=&\langle E^3-2E^2\langle E\rangle +2E\langle E\rangle ^2-\langle E\rangle ^3\rangle \\&=&\langle E^3\rangle -2\langle E^2\rangle \langle E\rangle +\langle E\rangle^3
+\end{eqnarray*}
+Considering the relations below
+\begin{eqnarray*}
+\langle E\rangle &=&\frac{E_r\mathrm{exp}(-\beta E_r)}{\mathrm{exp}(-\beta E_r)}\\
+\langle E^2\rangle &=&\frac{E_r^2\mathrm{exp}(-\beta E_r)}{\mathrm{exp}(-\beta E_r)}
+\end{eqnarray*}
+\begin{equation*}
+C_V=\frac{\langle E^2\rangle-\langle E\rangle^2}{kT^2}
+\end{equation*}
+\begin{equation*}
+k^2\left\{T^4\left(\frac{\partial C_V}{\partial T}\right)_V+2T^3C_V\right\}=-\frac{1}{\beta^2}\frac{\partial}{\partial \beta}\left\{\beta^2(\langle E^2\rangle-\langle E\rangle^2)\right\}+\frac{2}{\beta}(\langle E^2\rangle-\langle E^2\rangle)\\
+\end{equation*}
+We have
+\begin{equation*}
+\langle E^3\rangle=k^2\left\{T^4\left(\frac{\partial C_V}{\partial T}\right)_V+2T^3C_V\right\}
+\end{equation*}
+
 
 \section*{Problem 3.19}
 	\begin{equation*}
