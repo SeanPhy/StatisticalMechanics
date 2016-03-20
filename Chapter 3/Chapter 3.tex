@@ -57,6 +57,25 @@
 \section*{Problem 3.6}
 
 \section*{Problem 3.7}
+\begin{eqnarray*}
+C_p-C_V=(\frac{\partial H}{\partial T})_p-(\frac{\partial E}{\partial T})_V   \qquad\quad\\
+=(\frac{\partial (E+pV)}{\partial T})_p-(\frac{\partial E}{\partial T})_V   \\
+=p (\frac{\partial V}{\partial T})_p+(\frac{\partial E}{\partial V})_{\beta}(\frac{\partial V}{\partial T})_p  \\
+=(\frac{\partial V}{\partial T})_p (p+(\frac{\partial E}{\partial V})_{\beta} ) \qquad \\
+=-\frac{(\frac{\partial p}{\partial T})_V}{(\frac{\partial p}{\partial V})_T}(p-\frac{\partial^2 lnQ}{\partial \beta \partial V})  \quad \\
+=-\frac{k(\beta \frac{\partial^2 ln Q}{\partial \beta \partial V}-\frac{\partial lnQ}{\partial V})^2}{(\frac{\partial^2 lnQ}{\partial V^2})_{\beta}} \quad\\
+=desired \ formula.\qquad 
+\end{eqnarray*}
+As for classical ideal gas, $(\frac{\partial E}{\partial V})_{\beta}=0$, $pV=NkT$, we soon get that the above result is Nk.
+
+
+\section*{Problem 3.8}
+For classical ideal gas
+\begin{eqnarray*}
+\ln\left(\frac{Q_1}{N}\right)+T\left(\frac{\partial \ln Q_1}{\partial T}\right)_P&=&\ln\left\{\frac{V}{h^3N}(2\pi mkT)^{3/2}\right\}+T\frac{\partial}{\partial T}\ln\left\{\frac{N}{h^3P}(2\pi m)^{3/2}(kT)^{3/5}\right\}\\
+&=&\ln\left\{\frac{V}{N}(\frac{2\pi mkT}{h^2})^{3/2}\right\}+\frac{5}{2}\\
+&=&\frac{S}{Nk}
+\end{eqnarray*}
 
  \section*{Problem 3.9}
  	For an ideal monaomic gas,its heat capacity C would be 3R/2.While asume the whole progress is quasistatic,it would obey
@@ -159,7 +178,7 @@
 	
 	$\therefore$for $N$ molecules,
 	\begin{equation*}
-		Q_N(V,T)= \frac{1}{N!}\left\{ 8 \pi V \left( \frac{kT}{hc} \right)^3\right\}
+		Q_N(V,T)= \frac{1}{N!}\left\{ 8 \pi V \left( \frac{kT}{hc} \right)^3\right\}^N
 	\end{equation*}
 
 	From $Q_N(V,T)$, it's easy to calculate:
@@ -169,7 +188,47 @@
 		\gamma = \frac{4}{3}
 	\end{gather*}
 
+
+	As stated in section 3.4, $g(E) $ can be obtained from the inverse Laplace transform, i.e.,
+	\begin{equation*}
+		g(E)=\frac{1}{2 \pi i}\int_{\beta'-i\infty}^{\beta'+i\infty} e^{\beta E} Q(\beta)d \beta
+	\end{equation*}
+	in our case, $Q(\beta)=Q_N(V, T) $, hence
+	\begin{eqnarray*}
+		g(E) &=& \frac{1}{2 \pi i}\int_{\beta'-i\infty}^{\beta'+i\infty} e^{\beta E} Q(\beta)d \beta\\
+		&=& \frac{(8 \pi  V)^N}{N!(hc)^{3N} } \text{Res}\left[ \frac{e^{\beta E}}{\beta^{3N}} \right]_{\beta=0}\\
+		&=& \frac{(8 \pi  V)^N E^{3N-1}}{N!(3N-1)!(hc)^{3N} }
+	\end{eqnarray*}
+
+
 % section problem_3_15 (end)
+\section*{Problem 3.17}
+\begin{eqnarray*}
+\int [U-H(p,q)]e^{-\beta H(p,q)}d\omega=0 \\
+\Rightarrow \int [\frac{\partial U}{\partial \beta}-H(p,q)U+H^2(p,q)]e^{-\beta H(p,q)}d\omega=0 \\
+\Rightarrow \int [\frac{\partial U}{\partial \beta}-U^2+H^2(p,q)]e^{-\beta H(p,q)}d\omega=0  \\
+\Rightarrow \langle H^2\rangle-U^2=-\frac{\partial U}{\partial \beta}
+\end{eqnarray*}
+That is the desired equation.
+\section*{Problem 3.18}
+\begin{eqnarray*}
+\langle(\Delta E)^3\rangle&=&\langle E^3-2E^2\langle E\rangle +2E\langle E\rangle ^2-\langle E\rangle ^3\rangle \\&=&\langle E^3\rangle -2\langle E^2\rangle \langle E\rangle +\langle E\rangle^3
+\end{eqnarray*}
+Considering the relations below
+\begin{eqnarray*}
+\langle E\rangle &=&\frac{E_r\mathrm{exp}(-\beta E_r)}{\mathrm{exp}(-\beta E_r)}\\
+\langle E^2\rangle &=&\frac{E_r^2\mathrm{exp}(-\beta E_r)}{\mathrm{exp}(-\beta E_r)}
+\end{eqnarray*}
+\begin{equation*}
+C_V=\frac{\langle E^2\rangle-\langle E\rangle^2}{kT^2}
+\end{equation*}
+\begin{equation*}
+k^2\left\{T^4\left(\frac{\partial C_V}{\partial T}\right)_V+2T^3C_V\right\}=-\frac{1}{\beta^2}\frac{\partial}{\partial \beta}\left\{\beta^2(\langle E^2\rangle-\langle E\rangle^2)\right\}+\frac{2}{\beta}(\langle E^2\rangle-\langle E^2\rangle)\\
+\end{equation*}
+We have
+\begin{equation*}
+\langle E^3\rangle=k^2\left\{T^4\left(\frac{\partial C_V}{\partial T}\right)_V+2T^3C_V\right\}
+\end{equation*}
 
 \section*{Problem 3.16}
 
@@ -307,6 +366,58 @@
 	\end{equation*}
 	for noninteracting systems.
 % section problem_3_25 (end)
+\section*{Problem 3.27}
+\begin{eqnarray*}
+g(E)=\frac{1}{2 \pi}\int_{-\infty}^{+\infty} e^{(\beta +i\gamma)(E-(N/2)\hbar\omega)}(1-e^{-\hbar\omega(\beta +i\gamma)})^{-N}d\gamma  \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \quad\\
+=\frac{1}{2 \pi}\int_{-\infty}^{+\infty} e^{(\beta +i\gamma)(E-(N/2)\hbar\omega)}(1+C_N^1e^{-\hbar\omega(\beta +i\gamma)}+C_{N+1}^2e^{-2\hbar\omega(\beta +i\gamma)}+C_{N+2}^3e^{-3\hbar\omega(\beta +i\gamma)}+...)d\gamma  \\
+=\sum_{k=0}^{\infty}\delta(E-(N/2)\hbar\omega-k\hbar\omega)C_{N+k-1}^{k}  \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\end{eqnarray*}
+The above result is the same as that derived from direct state counting for N distinguishable quantum SHOs. Assume $ E=(m+N/2)\hbar\omega $, then we have:
+\begin{eqnarray*}
+S=k\ln(g(E)dE)=k\ln(C_{N+m-1}^m)
+\end{eqnarray*}
+while $m\gg1$, $N\gg1$, using the Stiring formula we can find:
+\begin{eqnarray*}
+S\approx k(m\ln{\frac{N+m-1}{m}}+(N-1)\ln{\frac{N+m-1}{N-1}})\approx Nk(\frac{m+N}{N}\ln{\frac{m+N}{N}}-\frac{m}{N}\ln{\frac{m}{N}})
+\end{eqnarray*}
+which is the desired formula.
+\section*{Problem 3.28}
+\subsection*{a)}
+Define
+\begin{equation*}
+R=\left(E-\frac{1}{2}N\hbar\omega\right)\Bigg/\hbar\omega
+\end{equation*}
+Number of states avaliable for the whole system is
+\begin{equation*}
+m_0=\frac{(R+N-1)!}{R!(N-1)!}
+\end{equation*}
+Number of states avaliable for a particular oscillator in state n
+\begin{equation*}
+m=\frac{(R+N-1-n-1)!}{(R-n)!(N-1)!}
+\end{equation*}
+Probability
+\begin{equation*}
+p_n=\frac{m}{m_0}=\frac{R(R-1)\cdots(R-n+1)(N-1)}{(R+N-1)\cdots(R+N-1-n-1)}
+\end{equation*}
+for $N\gg 1$ and $R\gg n$
+\begin{equation*}
+p_n\approx \frac{(\bar n)^n}{(\bar n+1)^{n+1}}
+\end{equation*}
+where $\bar n=R/N$
+\subsection*{b)}
+The number of states avaliable for total energy E and N particles are
+\begin{equation*}
+g(E,N)=\frac{1}{N!}(\frac{V}{h^3})^N\frac{(2\pi m )^{3N/2}}{(3N/2-1)!}E^{3N/2-1}
+\end{equation*}
+Probability
+\begin{equation*}
+p=\frac{g(E-\epsilon,N-1)}{g(E,N)}
+\end{equation*}
+For $N\ll1$ and $E\ll\epsilon$
+\begin{equation*}
+p\propto\left(\frac{E-\epsilon}{E}\right)^{3N/2}\approx \mathrm{exp}(-\beta \epsilon)
+\end{equation*}
+where $\beta=3N/2E$.
 
 \section*{Problem 3.29}
 	I can't solve this problem.The intergral of the unharnomic terms in the partition fuction is infinite.
@@ -386,7 +497,20 @@
 
 	Once $Q_N$ is obtained, all thermodynamics of the system can be obtained. I forget the definition of electric polarization, etc. I hope you can obtain them from $Q_N$ by yourself.
 % section problem_3_35 (end)
-
+\section*{Problem 3.37}
+Prof.Ni's ppt has given a detailed and complete solution to this problem. If someone regards it worthwhile I will renew this text later.
+\section*{Problem 3.38}
+As defined in the problem, we examine the patition function
+\begin{eqnarray*}
+Q_1(\beta)&=&\int_{-J}^J\mathrm{exp}(\beta g \mu_BmH)\\
+&=&\frac{1}{\beta g \mu_BH}(\mathrm{exp}(\beta g \mu_BJH)-\mathrm{exp}(\beta g \mu_B JH))
+\end{eqnarray*}
+Choose $x=\beta g \mu_BJH$\\
+Thermal dynamic properties
+\begin{eqnarray*}
+\bar{\mu}_z&=&\frac{1}{\beta}\frac{\partial}{\partial H}\ln Q_1(\beta)\\
+&=&J^2g\mu_B(\coth (x)-\frac{1}{x})
+\end{eqnarray*}
 
 \section*{Problem 3.39}
 	By using equation (3.9.18) we could get
