@@ -36,13 +36,124 @@
 \begin{document}
 \maketitle
 
+
 \section*{Problem 3.1}
+In fact the solution to this problem is just a mathematical derivation with only little physics.
+\subsection*{(a)}
+    \begin{align}
+    \mathcal{LHS}&=\langle \left( \Delta n_r \right)^2 \rangle  \\
+    &=\langle n_r^2 \rangle +\langle n_r \rangle^2\\
+    &=\left. \frac{1}{\Gamma}\left( \omega_r \frac{\partial}{\partial \omega_r } \right)^2\Gamma \right|_{\omega_r=1,\forall r}
+    - \left. \left(   \omega_r \frac{\partial}{\partial \omega_r }  \left(\ln \Gamma \right)  \right)^2 \right|_{\omega_r=1,\forall r}\\
+    &= \left. \frac{1}{\Gamma} \left( \omega_r \frac{\partial}{\partial \omega_r } + \omega_r^2 \frac{\partial^2}{\partial \omega_r^2} \right)\Gamma \right|_{\omega_r=1,\forall r}
+    - \left. \left( \frac{1}{\Gamma}   \omega_r \frac{\partial}{\partial \omega_r } \Gamma \right)^2 \right|_{\omega_r=1,\forall r}\\
+    \mathcal{RHS}&=\left. \left( \omega_r \frac{\partial}{\partial \omega_r } \right)^2\left(\ln \Gamma \right)  \right|_{\omega_r=1,\forall r}\\
+    &= \left. \frac{1}{\Gamma}  \omega_r \frac{\partial}{\partial \omega_r }\Gamma \right|_{\omega_r=1,\forall r}
+    - \left. \left( \frac{1}{\Gamma}   \omega_r \frac{\partial}{\partial \omega_r } \Gamma \right)^2 \right|_{\omega_r=1,\forall r}
+    +\left. \frac{1}{\Gamma}\omega_r^2 \frac{\partial^2}{\partial \omega_r^2} \Gamma \right|_{\omega_r=1,\forall r}\\
+    &=\mathcal{LHS}
+    \end{align}
+\subsection*{(b-1)}
+    \begin{align}
+    & U=\frac{\sum_r\omega_r E_r \exp{(-\beta E_r)}}{\sum_r\omega_r \exp{(-\beta E_r)}}\\
+    \Rightarrow& \frac{\partial\beta}{\partial\omega_r}= \frac{(E_r-U)\exp{(-\beta E_r)}} {\sum_r\omega_r (E_r-U) E_r \exp{(-\beta E_r)}}
+    \end{align}
+
+    \begin{align}
+    \mathcal{LHS}&=\frac{\partial\beta}{\partial\omega_r}
+    = \frac{(E_r-U)\exp{(-\beta E_r)}} {\sum_r\omega_r (E_r-U) E_r \exp{(-\beta E_r)}}\\
+    &= \frac{(E_r-U)\exp{(-\beta E_r)}  /  \sum_r\omega_r \exp{(-\beta E_r)}} {\sum_r\omega_r (E_r-U) E_r \exp{(-\beta E_r)}  /  \sum_r\omega_r \exp{(-\beta E_r)}}\\
+    &= \frac{E_r-U} {\left< E_r^2 \right> -\left< E_r \right>U} \frac{\left< n_r \right>}{\mathcal{N}}\\
+    &= \frac{E_r-U}{\left< E_r^2 \right> -U^2} \frac{\left< n_r \right>}{\mathcal{N}}=\mathcal{RHS}
+    \end{align}
+
+\subsection*{(b-2)}
+    \begin{align}
+    \frac{\left< (\Delta n_r)^2 \right>}{\mathcal{N}}
+    =& \omega_r \frac{\partial}{\partial \omega_r}\left[ \frac{\omega_r \exp{(-\beta E_r)}}{ \sum_r \omega_r \exp{(-\beta E_r)} } \right]\\
+    =& \frac{\omega_r \exp{(-\beta E_r)}}{ \sum_r \omega_r \exp{(-\beta E_r)} }
+    -\frac{\omega_r^2 E_r  \exp{(-\beta E_r)}}{ \sum_r\omega_r \exp{(-\beta E_r)} }  \frac{\partial\beta}{\partial \omega_r}\\
+    &-\frac{\omega_r^2 \left(\exp{(-\beta E_r)}\right)^2 - \omega_r^2 \exp{(-\beta E_r)} \sum_r\omega_r E_r \exp{(-\beta E_r)} }
+    { \left( \sum_r\omega_r \exp{(-\beta E_r)} \right)^2 }
+    \frac{\partial\beta}{\partial \omega_r}\\
+    =&\frac{\left< n_r \right>}{\mathcal{N}}
+    -\frac{\left< n_r \right>}{\mathcal{N}}E_r \frac{\partial\beta}{\partial \omega_r}
+    - \left(  \frac{\left< n_r \right>}{\mathcal{N}} \right)^2
+    +\frac{\left< n_r \right>}{\mathcal{N}} U \frac{\partial\beta}{\partial \omega_r}\\
+    =&\frac{\left< n_r \right>}{\mathcal{N}}
+    +\frac{\left< n_r \right>}{\mathcal{N}} (U-E_r) \frac{\partial\beta}{\partial \omega_r}
+    - \left(  \frac{\left< n_r \right>}{\mathcal{N}} \right)^2
+    \end{align}
+
 
 \section*{Problem 3.2}
 
+    \begin{align}
+    g\prime\prime(x_0)&\simeq\frac{f\prime\prime(x_0)}{f(x_0)}-\frac{U^2-U}{x_0^2}\\
+    &=\frac{\sum\omega_r E_r(E_r-1)x_0^{E_r}}{x_0^2 \sum\omega_r x_0^{E_r}}-\frac{U^2-U}{x_0^2}\\
+    &=\frac{\left<E_r^2\right>-\left<E_r\right>}{x_0^2} -\frac{U^2-U}{x_0^2}\\
+    &=\frac{\left<E_r^2\right>-U^2}{x_0^2}\\
+    &=\frac{\left(\left<E_r\right>-U\right)^2}{x_0^2}
+    \end{align}
+
+
 \section*{Problem 3.3}
 
+    \begin{align}
+    \exp(x)=\sum \frac{1}{n!}x^n\\
+    \frac{1}{n!}=\frac{1}{2\pi\i} \oint \frac{\exp(z)}{z^{n+1}}dz
+    \end{align}
+    \begin{align}
+    \text{Define: }
+    g(z)\equiv \ln{(\frac{\exp(z)}{z^{n+1}})}\equiv \ln (F(z))
+    \end{align}
+    \begin{align}
+    g(z)=z-(n+1)\ln z
+    \end{align}
+For $F(z)$, the saddle point is defined as $F\prime(x_0)=0$, which gives $x_0=n+1$. Notice that $z=x_0$ is also the saddle point for $g(z)$. Expanding $g(z)$ about the point $z=x_0$, along the line $z=x_0+iy$, we get:
+    \begin{align}
+    g(z)=g(x_0)-\frac{1}{2}g \prime \prime(x_0)y^2+...
+    \end{align}
+Thus, the integrand, along the line $z=x_0+iy$, will become:
+    \begin{align}
+    F(z)=\frac{\exp(x_0)}{x_0^{n+1}} \exp \left[  -\frac{1}{2}g \prime \prime(x_0)y^2  \right]
+    \end{align}
+    \begin{align}
+    \frac{1}{n!}&=\frac{1}{2\pi\i} \oint \frac{\exp(z)}{z^{n+1}}dz\\
+    &\simeq \frac{1}{2\pi\i} \frac{\exp(x_0)}{x_0^{n+1}} \int_{-\infty}^{+\infty} \exp \left[  -\frac{1}{2}g \prime \prime(x_0)y^2  \right] \i dy\\
+    &=\frac{\exp(n+1)}{(n+1)^{n+1}} \frac{1}{ \left[2\pi g \prime \prime(x_0)\right]^{1/2}}\\
+    &=\frac{\exp(n+1)}{(n+1)^{n+1}} \left(\frac{n+1}{2\pi}\right)^{1/2}
+    \end{align}
+Do a simple calculation and replace $(n+1)$ wit$n$, we get:
+    \begin{align}
+    n! \simeq \sqrt{2\pi n} \left( \frac{n}{e} \right)^n
+    \end{align}
+which is just the original form of Stirling formula for $n!$.
+
+
 \section*{Problem 3.4}
+    \begin{align}
+    \mathcal{LHS}&=(k/\mathcal{N}) \ln\Gamma\\
+    &=(k/\mathcal{N}) \ln\sum W_{n_r}\\
+    &=(k/\mathcal{N}) \ln\sum \frac{\mathcal{N}!}{\Pi (n_r!)}
+    \end{align}
+When $\mathcal{N}$ is extremely a huge number, only the maximal set ${n_r^*}$ will make a difference. Thus:
+    \begin{align}
+    \sum \frac{\mathcal{N}!}{\Pi (n_r!)}&=\frac{\mathcal{N}!}{\Pi (n_r!)}\\
+    &=\frac{\mathcal{N}!}{\Pi (\langle n_r \rangle !)}
+    \end{align}
+    \begin{align}
+    \mathcal{LHS}&=(k/\mathcal{N}!) \ln\sum \frac{\mathcal{N}}{\Pi (n_r!)}\\
+    &=(k/\mathcal{N}) \ln\frac{\mathcal{N}!}{\Pi (\langle n_r \rangle !)}\\
+    &=(k/\mathcal{N}) \left( \mathcal{N}\ln\mathcal{N} - \sum \langle n_r \rangle \ln \langle n_r \rangle \right)\\
+    &=(k/\mathcal{N}) \left( \sum \langle n_r \rangle \ln\mathcal{N} - \sum \langle n_r \rangle \ln \langle n_r \rangle \right)\\
+    &=(k/\mathcal{N}) \sum \left( \langle n_r \rangle \left(\ln\mathcal{N} -\ln \langle n_r \rangle \right) \right)\\
+    &=-k\sum \frac{\langle n_r \rangle}{\mathcal{N}} \ln \frac{\langle n_r \rangle}{\mathcal{N}}\\
+    &=-k\langle \ln Pr \rangle\\
+    &=S=\mathcal{RHS}
+    \end{align}
+
+
 
 \section*{Problem 3.5}
 	Since the Helmholtz free energy $A(N,V,T)$ has the property:
@@ -415,7 +526,7 @@ We have
     $$
         \mu_s=s\mu_1
     $$
-      
+
 
 \section*{Problem 3.27}
 \begin{eqnarray*}
