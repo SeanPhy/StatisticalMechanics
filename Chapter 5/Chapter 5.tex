@@ -36,4 +36,17 @@
 \begin{document}
 \maketitle
 \section*{Problem 5.1}
+
+\section{Problem 5.5} % (fold)
+\label{sec:problem_5_5}
+	
+	The partition function of the noninteracting,indistinguishable particles system is:
+	$$Q_N(V,T)=\frac{1}{N!\lambda^{3N}}\sum_P \delta_P[f(Pr_1-r_1)\cdots f(Pr_N-r_N)]$$
+	where $f(r)=e^{-\frac{\pi r^2}{\lambda^2}}$
+	The first approximation is:
+	$$\sum_P=1\pm\sum_{i<j}f_{ij}f_{ji}$$
+	So the partition function in first approximation is:
+	$$Q_N(V,T)=\frac{1}{N!\lambda^{3N}}\int(1\pm\sum_{i<j}e^{-\frac{\pi r_{ij}^2}{\lambda^2}})d^{3N}r$$
+% section problem_5_5 (end)
+
 \end{document}
