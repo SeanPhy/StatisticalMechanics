@@ -37,6 +37,50 @@
 \maketitle
 \section*{Problem 4.1}
 
+\section*{Problem 4.4}
+The probability of a state with energy $E_r$ and particle number $N$ is
+\begin{equation}
+p_{r,N} = \frac{e^{-\beta E_{r,N}+\beta \mu N}}{\mathcal{Q}(\mu,V,\beta)}
+\end{equation}
+in which $\mathcal{Q} = \sum_{r,N}e^{-\beta E_{r,N}+\beta \mu N}$ is the grand canonical partition function. Since we have define that $z = e^{\beta\mu}$, the probability can be written as:
+\begin{equation}
+p_{r,N} = \frac{z^N e^{-\beta E_{r,N}}}{\mathcal{Q}(z,V,\beta)}
+\end{equation}
+So the probability that has exactly N particles will be:
+\begin{equation}\label{prob}
+p_N = \sum_r p_{r,N} = \frac{z^N\sum_{r}e^{-\beta E_{r,N}}}{\mathcal{Q}(z,V,\beta)}
+\end{equation}
+easily we can find the summation in the numerator is the canonical partition function of system with $V,N$ and $\beta$:
+\begin{equation}
+Q_N(V,\beta) = \sum_{r}e^{-\beta E_{r,N}}
+\end{equation}
+Thus Eq.(\ref{prob}) will become: 
+\begin{equation}
+p_N = \frac{z^N Q_N(V,\beta)}{\mathcal{Q}(z,V,\beta)}
+\end{equation}
+For ideal classical gas, the canonical partition function is:
+\begin{equation}
+Q_N(V,T) = \frac{V^N}{N!}\left(\frac{2\pi mkT}{h^2}\right)^{3N/2}
+\end{equation}
+and the grand partition function is
+\begin{equation}
+\mathcal{Q}(z,V,\beta) = \sum_{N = 0}^\infty z^N Q_N(V,T) = \exp\left[zV\left(\frac{2\pi mkT}{h^2}\right)^{3/2}\right]
+\end{equation}
+Clearly the probability distribution of particle number is
+\begin{equation}
+p_N = \frac{1}{N!}\frac{(zV\lambda_T^{-3})^N}{e^{zV\lambda_T^{-3}}}
+\end{equation}
+It is obvious that this distribution is a Poison distribution. From the knowledge of Poison distribution, we know the root-mean-square value of $(\Delta N)$ is
+\begin{equation}
+\Delta N = \sqrt{zV\lambda_T^{-3}}=\sqrt{e^{\beta\mu}V\left(\frac{2\pi mkT}{h^2}\right)^{3/2}}
+\end{equation}
+We can also get this result from the formula of grand canonical ensemble:
+\begin{eqnarray}
+\Delta N &=&kT\sqrt{ \left(\frac{\partial^2 \ln\mathcal{Q}}{\partial\mu^2}\right)_{T,V}}\nonumber\\
+&=&\sqrt{e^{\beta\mu}V\left(\frac{2\pi mkT}{h^2}\right)^{3/2}}
+\end{eqnarray}
+And this result is consistent with the one we get by Poison distribution.
+
 \section*{Problem 4.5} % (fold)
 \label{sec:problem_4_5}
 	
@@ -48,6 +92,25 @@
 	So we can infer that:
 	$$S=k[\frac{\partial (Tq)}{\partial{T}}]_{V,\mu}$$
 % section problem_4_5 (end)
+
+\section*{Problem 4.14}
+The Clausius–Clapeyron equation is
+$$
+\frac{dP_\sigma}{dT} = \frac{L}{T\Delta v}
+$$
+Since the volume of liquid is negligible compared to that of gas, we can alternate $\Delta v$ by $v_g = kT/P_\sigma$. Put all of these into the Clausius–Clapeyron equation, we can get a differential equation:
+\begin{equation}
+\frac{dP_\sigma}{P_\sigma} = \frac{L}{R}\frac{dT}{T^2}
+\end{equation}
+so the solution to the differential equation will be:
+\begin{equation}\label{cce}
+P_\sigma(T) = P_0\exp\left[\frac{L}{R}\left(\frac{1}{T_0}-\frac{1}{T}\right)\right]
+\end{equation}
+From the problem we know that $L = 2260\mathrm{kJ/kg} = 40680\mathrm{J/mol}$, $T_0 =373\mathrm{K}$ and $P_0 = 101\mathrm{kPa}$. Then we put all these numbers into Eq.(\ref{cce}) and we get the equilibrium vapor pressure is
+$$
+P_\sigma(473\mathrm{K}) = 1619\mathrm{kPa}
+$$
+Experiment result is $P_\sigma \sim 1500\mathrm{kPa}$, and our calculation is approximately correct.
 
 \section*{Problem 4.15} % (fold)
 \label{sec:problem_4_15}
