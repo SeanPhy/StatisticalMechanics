@@ -37,7 +37,35 @@
 \maketitle
 \section*{Problem 5.1}
 
-\section{Problem 5.5} % (fold)
+\section*{Problem 5.4}
+If we take the unsymmetrized wave function
+$$
+\psi_E(\mathbf{q}) = \prod_{i=1}^N u_{\epsilon_i}(\mathbf{q}_i)
+$$
+then the density matrix will be:
+\begin{equation}
+\langle 1,\cdots,N|e^{-\beta H}|1',\cdots,N'\rangle = \sum_{E}e^{-\beta E}\psi_E(\mathbf{r}_1,\cdots,\mathbf{r}_N)\psi^*_E(\mathbf{r}_1',\cdots,\mathbf{r}_N')=\sum_{E}e^{-\beta E}\prod_{i=1}^N u_{\epsilon_i}(\mathbf{r}_i)u^*_{\epsilon_i}(\mathbf{r}_i)
+\end{equation}
+Since we are considering about an ideal classical gas, the energy eigenstates are also momentum eigenstates, so we can find that the eigenfunction of momentum will be:
+$$
+u_{\mathbf{k}_i} = \frac{1}{\sqrt{V}}e^{i\mathbf{k}\cdot\mathrm{r}}
+$$
+we can easily find that the density matrix will be:
+\begin{equation}
+\langle 1,\cdots,N|e^{-\beta H}|1',\cdots,N'\rangle = \sum_{\mathbf{k}_1,\cdots \mathbf{k}_N}e^{-\frac{\beta \hbar^2}{2m}(\mathbf{k}^2_1+\cdots+\mathbf{k}_N^2)}\prod_{i=1}^N\frac{1}{V}e^{i\mathbf{k}_i\cdot(\mathbf{r}_i-\mathbf{r}_i')}
+\end{equation}
+so the result will be
+\begin{equation}
+\langle 1,\cdots,N|e^{-\beta H}|1',\cdots,N'\rangle = \prod_{i=1}^N\frac{1}{(2\pi)^3}\int d^3k \,e^{-\frac{\beta \hbar^2}{2m}\mathbf{k}_i^2+i\mathbf{k}_i\cdot(\mathbf{r}_i-\mathbf{r}_i')} = \prod_{i=1}^N\left(\frac{2\pi m}{\beta h^2}\right)^{3/2}\exp\left[-\frac{m}{2\beta\hbar^2}(\mathbf{r}_i-\mathbf{r}_i')^2\right]
+\end{equation}
+Obviously there is no correlation term between different particles. Then calculate the partition function:
+\begin{equation}
+Q_N = \left(\frac{2\pi m}{\beta h^2}\right)^{3N/2}\int \prod_{i=1}^N d^3r_i = V^N \left(\frac{2\pi m}{\beta h^2}\right)^{3N/2}
+\end{equation}
+We can find that there is no Gibbs’ correction factor in the partition function.
+
+
+\section*{Problem 5.5} % (fold)
 \label{sec:problem_5_5}
 	
 	The partition function of the noninteracting,indistinguishable particles system is:
