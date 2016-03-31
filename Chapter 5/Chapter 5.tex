@@ -14,6 +14,8 @@
 \usepackage{exscale}
 \usepackage{relsize}
 \linespread{1.1}
+\newcommand{\tr}{\mathop{\mathrm{Tr}}}
+\usepackage{braket}
 
 %%%%%%%
 %第五章习题安排:
@@ -36,6 +38,30 @@
 \begin{document}
 \maketitle
 \section*{Problem 5.1}
+
+\section*{Problem 5.3}
+(a) Take the trace in momentum space. $\hat{H} = \hat{p}^{2}/2m$ so the density matrix is
+\begin{equation}
+\hat{\rho} = \frac{e^{-\beta \hat{H}}}{\tr (e^{-\beta \hat{H}})} = (\frac{m}{2\pi \beta \hbar^{2}})^{-3/2}e^{-\frac{\beta}{2m} \hat{p}^{2} }
+\end{equation}
+A simple observation is $\braket{\textbf{p'}|\hat{\rho}|\textbf{p}} \sim \delta_{\textbf{p}\textbf{p'}}$, which means without interaction the particle will propagate as a plane wave.\\
+(b) Use Fourier transformation to get the density matrix in momentum space, i.e.
+\begin{eqnarray}
+\rho(k',k) &=& \sqrt{\frac{m \omega}{2 \pi \hbar \sinh (\beta \hbar \omega)}}\int dx dx' \exp \left\{
+- \frac{m \omega}{2 \hbar \sinh (\beta \hbar \omega)} \left[(x'^{2} +x^{2}) \cosh (\beta \hbar \omega) -2 x' x \right] + i(k'x' - kx)
+ \right\} \notag \\
+&=& \sqrt{\frac{m \omega}{2 \pi \hbar \sinh (\beta \hbar \omega)}} \sqrt{\frac{4 \pi \hbar \sinh (\beta \hbar \omega)}{m \omega (\cosh \beta \hbar \omega -1 )}} \sqrt{\frac{4 \pi \hbar \sinh (\beta \hbar \omega)}{m \omega (\cosh \beta \hbar \omega +1 )}} \notag \\
+&\times& \exp \left\{-\left[ \frac{(\frac{k'-k}{2})^{2} \hbar \sinh \beta \hbar \omega}{m \omega (\cosh \beta \hbar \omega -1)} + \frac{(\frac{k'+k}{2})^{2} \hbar \sinh \beta \hbar \omega}{m \omega (\cosh \beta \hbar \omega +1)}
+ \right] \right\} \notag \\
+&=& \sqrt{\frac{8 \pi \hbar }{m \omega \sinh (\beta \hbar \omega)}} \exp \left\{ - \frac{\hbar\left[ (k'^{2}+k^{2}) \cosh \beta \hbar \omega - 2k'k\right]}{2 m \omega \sinh \beta \hbar \omega}
+\right\}
+\end{eqnarray}
+The expression resembles the real space density matrix. This is easy to comprehend that momentum and coordinate are conjugate in the SHO case. Other properties are just like the cases in \emph{Section 5.3}.
+
+
+
+
+
 
 \section*{Problem 5.4}
 If we take the unsymmetrized wave function
