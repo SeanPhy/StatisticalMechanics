@@ -37,6 +37,20 @@
 \maketitle
 \section*{Problem 4.1}
 
+
+\section*{Problem 4.3}
+The probability $P(N,V) = \binom{N_{0}}{N} p^{N} (1-p)^{N_{0}-N}$. Here for convenience I set $N_{0} = N^{(0)}$. This is a binomial distribution.\\
+(a) One can directly use the results from any standard probability textbook. For example,
+\begin{equation}
+\bar{N} = \sum_{N=0}^{N_{0}} N P(N,V) = N_{0} p \sum_{N=1}^{N_{0}} \frac{(N_{0}-1)!}{(N-1)!(N_{0} - N)!} p^{N-1} (1-p)^{N_{0}-N} = N_{0}p
+\end{equation}
+Similarly, we have $\overline{N(N-1)} = N_{0}(N_{0}-1) p^{2}$ so $\overline{N^{2}} = N_{0}(N_{0}-1) p^{2} + N_{0}p$. 
+Therefore $\overline{(\Delta N)^{2}} = \overline{N^{2}} - \bar{N}^{2} =\sqrt{N_{0}p(1-p)}$.\\
+(b) For large enough number, the discrete binomial distribution can be seen as gaussian distribution simply by taking a continum limit.\\
+(c) Another standard exercise in probability textbook. When $p \ll 1$ and $N \ll N_{0}$, it is clear that $N_{0}!/(N_{0}-N)! \sim N_{0}^{N}$, $(1-p)^{\frac{N_{0}-N}{p} p} \sim e^{-N_{0}p}$. Now replace $\bar{N} = N_{0}p$ and we get the desired answer.
+
+
+
 \section*{Problem 4.4}
 The probability of a state with energy $E_r$ and particle number $N$ is
 \begin{equation}
@@ -108,6 +122,24 @@ This problem is totally identical with Mr.Ni's material for class, I regard it m
 	\overline{NE}-\overline{N}* \overline{E}=\frac{\partial}{\partial \alpha}(\frac{\partial}{\partial \beta}\ln \Xi)=-\frac{\partial}{\partial \alpha} U=-\frac{\partial U}{\partial N}\frac{\partial N}{\partial \alpha}= (\frac{\partial U}{\partial N})\overline{(\Delta N)^2}
 \end{equation}
 
+
+\section*{Problem 4.13}
+Use the linearity of expectation. From $J=E-N \mu$,
+\begin{eqnarray}
+\overline{(\Delta J)^{2}} &=& \overline{E^{2}} - 2 \mu \overline{EN} + \mu^{2} \overline{N^{2}} - \bar{E}^{2} - \mu^{2} \bar{N}^{2} \notag \\
+&=& \overline{(\Delta E)^{2}} + \mu^{2} \overline{(\Delta N)^{2}} - 2 \mu \overline{EN}\notag  \\
+&=& kT^{2} C_{V} + \left[ (\frac{\partial U}{\partial N})^{2} + \mu^{2}  \right]\overline{(\Delta N)^{2}}  - 2 \mu \overline{EN}
+\end{eqnarray}
+Now compute $\overline{EN} $.
+\begin{equation}
+\overline{EN} = -\frac{\partial U}{\partial \alpha} = - \frac{\partial U}{\partial N} \frac{\partial N}{\partial \alpha} = \frac{\partial U}{\partial N} \overline{(\Delta N)^{2}}.
+\end{equation}
+Therefore,
+\begin{equation}
+\overline{(\Delta J)^{2}} = kT^{2} C_{V} + \left[ (\frac{\partial U}{\partial N})^{2} - 2\mu \frac{\partial U}{\partial N}+ \mu^{2}  \right]\overline{(\Delta N)^{2}} = kT^{2} C_{V} + 
+\left[\frac{\partial U}{\partial N} - \mu \right]^{2} \overline{(\Delta N)^{2}}
+\end{equation}
+
 \section*{Problem 4.14}
 The Clausius–Clapeyron equation is
 $$
@@ -126,6 +158,11 @@ $$
 P_\sigma(473\mathrm{K}) = 1619\mathrm{kPa}
 $$
 Experiment result is $P_\sigma \sim 1500\mathrm{kPa}$, and our calculation is approximately correct.
+
+
+
+
+
 
 \section*{Problem 4.15} % (fold)
 \label{sec:problem_4_15}
