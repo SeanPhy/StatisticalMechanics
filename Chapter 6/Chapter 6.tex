@@ -36,7 +36,12 @@
 \begin{document}
 \maketitle
 \section*{Problem 6.1}
-
+\section*{Problem 6.8}
+\begin{eqnarray*}
+Z&=&\frac{1}{N!}(\int e^{-\beta (gz+\frac{p^2}{2m})}\frac{d^3\vec{p}d^3\vec{x}}{h^3})^N  \\
+&=&\frac{1}{N!}(\frac{S(2\pi m)^{3/2}(1-e^{\beta gL})}{\beta^{5/2}h^3 g})^N
+\end{eqnarray*}
+Where S is the cylinder's cross area. The rest calculation is of little value. Note that we can naturally infer that the heat capacity is larger than that of free space situation by arguing that higher temperature will flatten the z-distribution and raise the gravitational potential energy.
 \section*{Problem 6.13}
 For classical ideal gases, the velocity distribution of the atoms are the Maxwell distribution, which can be obtained by canonical distribution:
 \begin{equation}
@@ -67,6 +72,16 @@ so for two different temperature, we can calculate the ratio of the function $f(
 &\geq&\left(\frac{T_1}{T_2}\right)^{3/2}\exp\left[\frac{\epsilon_0}{k}\left(\frac{1}{T_1}-\frac{1}{T_2}\right)\right]=2.075> 2
 \end{eqnarray}
 so the integral of $f(u,T_2)$ will twice larger than that of $f(u,T_1)$, which means the dissociation probability will be more than twice.
+\section*{Problem 6.18}
+\begin{eqnarray*}
+\bar{v}&=&\frac{\int e^{-a v^2}v d^3\vec{v}}{\int e^{-a v^2} d^3\vec{v}}  \\
+\bar{v}_{respective}&=&\frac{\int e^{-a (v^2_1+v^2_2)}|\vec{v_1}-\vec{v_2}| d^3\vec{v_1}d^3\vec{v_2}}{\int e^{-a (v^2_1+v^2_2)} d^3\vec{v_1}d^3\vec{v_2}}  \\
+&=&\frac{\int e^{-\frac{a}{2} ((\vec{v_1}-\vec{v_2})^2+(\vec{v_1}+\vec{v_2})^2)}|\vec{v_1}-\vec{v_2}| d^3(\vec{v_1}-\vec{v_2})d^3(\vec{v_1}+\vec{v_2})}{\int e^{-\frac{a}{2} ((\vec{v_1}-\vec{v_2})^2+(\vec{v_1}+\vec{v_2})^2)} d^3(\vec{v_1}-\vec{v_2})d^3(\vec{v_1}+\vec{v_2})}  \\
+&=&\frac{\int e^{-\frac{a}{2} (\vec{v_1}-\vec{v_2})^2}|\vec{v_1}-\vec{v_2}| d^3(\vec{v_1}-\vec{v_2})}{\int e^{-\frac{a}{2} (\vec{v_1}-\vec{v_2})^2} d^3(\vec{v_1}-\vec{v_2})}  \\
+&=&\frac{\int e^{-a v^2}\sqrt{2}v d^3\vec{v}}{\int e^{-a v^2} d^3\vec{v}}  \\
+&=&\sqrt{2}\bar{v}
+\end{eqnarray*}
+Proved.
 
 \section*{Problem 6.23}
 The first step is to find the equilibrium point:
@@ -98,6 +113,8 @@ $$
 T_{\mathrm{oc}} = \frac{\hbar}{k}\sqrt{\frac{4V_0}{a^2 m}}\sim 6394\mathrm{K}
 $$
 Since $T_{\mathrm{oc}}\gg T_\mathrm{rot}$, the approximation that the molecule is rigid when we calculate the moment of inertia is acceptable. And our conclusion is that the oscillating mode will begin to contribute to the heat capacity at temperature $\sim 6000\mathrm{K}$ and vibration mode will begin to contribute to heat capacity at temperature $\sim 70\mathrm{K}$.
+\section*{Problem 6.28}
+Again, I regard this problem as a pure calculational exercise and have no interest to do it now. (Actually up till now my problems are all such things, so I will preserve those seemingly more tedious work. )
 
 \section*{Problem 6.33}
 Assumes that the initial density of $\mathrm{O}_2$ and $\mathrm{CH}_4$ is 
