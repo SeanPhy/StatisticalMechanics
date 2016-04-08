@@ -13,6 +13,7 @@
 \usepackage{feynmf}
 \usepackage{exscale}
 \usepackage{relsize}
+\usepackage{bm}%bold math(for vector)
 \linespread{1.1}
 
 %%%%%%%
@@ -175,6 +176,29 @@ Experiment result is $P_\sigma \sim 1500\mathrm{kPa}$, and our calculation is ap
 	Use the triple point parameter.
 	$$ln(p)=-\frac{L}{kT}+6.6\times10^{26}$$
 % section problem_4_15 (end)
+
+\section*{Problem 4.17} % (fold)
+\label{sec:problem_4_17}
+	According to Clausius-Clapeyron equation
+	\begin{equation}
+		\frac{dP}{dT}=\frac{\Delta s}{\Delta v} = \frac{L}{T \Delta v}
+	\end{equation}
+	Therefore the tagent vector of the coexistence line of phase $A$ and $B$ is
+	\begin{equation}
+		\bm t_{AB} = ( \Delta v_{AB} , \Delta s_{AB} )
+	\end{equation}
+
+	At the triple point,
+	\begin{align*}
+		&\Delta v_{AB}+\Delta v_{BC}+\Delta v_{CA}=0\\
+		&\Delta s_{AB}+\Delta s_{BC}+\Delta s_{CA}=0\\
+		&\text{i.e.,}\\
+		&\bm t_{AB}+\bm t_{BC}+\bm t_{CA}=\bm 0
+	\end{align*}
+	Therefore, the slope of the coexistance line points into the third phase.
+
+% section problem_4_17 (end)
+
 \section*{Problem 4.19}
 According to the thermodynamic relation:
 $$
@@ -188,4 +212,7 @@ d\mu_2 &=& \frac{V_2}{N_2}dp-\frac{S_2}{N_2}dT
 On the coexisting curve, $d\mu_1=d\mu_2$. So,
 $$\frac{dp_{\sigma}}{dT}=\frac{s_B-s_A}{v_B-v_A}$$
 Proved.
+
+
+
 \end{document}
