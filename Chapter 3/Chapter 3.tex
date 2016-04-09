@@ -13,6 +13,8 @@
 \usepackage{feynmf}
 \usepackage{exscale}
 \usepackage{relsize}
+\usepackage{listings}
+\usepackage{upquote}
 \linespread{1.1}
 
 %%%%%%%
@@ -279,6 +281,23 @@ For classical ideal gas
 % section problem_3_13 (end)
 
 
+\section*{Problem 3.14}
+	The Lagrangian of the system can be simply expressed as
+	\begin{align}
+		L&=T-V\\
+		&=\sum\limits_{i}\frac{1}{2}m\dot{r_i}^2-\sum\limits_{i,j}{u(r_{ij})}-\sum\limits_{i}{u_{wall}(x_i)+u_{wall}(L-x_i)+u_{wall}(y_i)+u_{wall}(L-y_i)+u_{wall}(z_i)+u_{wall}(L-z_i)}
+	\end{align}
+	Applying the Legendre transform and get Hamiltonian of the system expressed as
+	\begin{align}
+		H=\sum\limits_{i}\frac{p_i^2}{2m}+\sum\limits_{i,j}{u(r_{ij})}+\sum\limits_{i}{u_{wall}(x_i)+u_{wall}(L-x_i)+u_{wall}(y_i)+u_{wall}(L-y_i)+u_{wall}(z_i)+u_{wall}(L-z_i)}
+	\end{align}
+	(a)\\
+	\begin{align}
+		P&=-(\frac{\partial H}{\partial V})=\frac{-1}{3L^2}(\frac{\partial H}{\partial L})\\
+		&=\frac{-1}{3L^2}\sum\limits_{i}{u_{wall}'(L-x_i)+u_{wall}'(L-y_i)+u_{wall}'(L-z_i)}
+	\end{align}
+
+
 \section*{Problem 3.15} % (fold)
 \label{sec:problem_3_15}
 
@@ -467,6 +486,22 @@ We have
 	They show walls of container are the main factor interaction with particles.
 % section problem_3_23 (end)
 
+\section*{Problem 3.24}
+	The relativistic dispersive relation of free particle can be expressed as
+	\begin{align}
+		\left\langle p\cdot u \right\rangle &=3kT\\
+		3kT&=\left\langle p\cdot u \right\rangle =\left\langle\gamma m_0u \cdot u \right\rangle =\left\langle\frac{m_0u^2}{\sqrt{1-\frac{u^2}{c^2}}} \right\rangle 
+	\end{align}
+	In the extreme relativistic case, the thermal energy per particle can be expressed as
+	\begin{align}
+		u&\rightarrow c\\
+		\left\langle E \right\rangle & \approx \left\langle pc \right\rangle \approx \left\langle pu\right\rangle=3kT
+	\end{align}
+	While in non-relativistic case
+	\begin{align}
+		\left\langle E\right\rangle=\left\langle\frac{1}{2}mu^2\right\rangle=\frac{3}{2}kT
+	\end{align}
+
 
 \section*{Problem 3.25} % (fold)
 \label{sec:problem_3_25}
@@ -643,7 +678,20 @@ where $\beta=3N/2E$.
 	You will find when $\frac{\mu H}{kT}=5.12$ magnetic moment is saturated.\\
 % section problem_3_33 (end)
 
-
+\section*{Problem 3.34}
+	\begin{align}
+		M_z&=N\mu_z=N\mu(coth(\beta \mu H)-\frac{1}{\beta \mu H})\\
+		&\approx N\mu (\frac{\beta \mu H}{3}-\frac{(\beta \mu H)^3}{45}+\cdots)\\
+		&\approx \frac{N\mu^2}{3kT}H
+	\end{align}
+	\begin{align}
+		\frac{N\mu^2}{3kT}=1.80\times10^{-6} mks
+	\end{align}
+	\begin{align}
+		pV=NkT\\
+		N=pV/kT\\
+		\mu=\sqrt{\frac{1.8\times10^{-6}mks \times3k^2T^2}{pV}}
+	\end{align}
 
 \section*{Problem 3.35} % (fold)
 \label{sec:problem_3_35}
@@ -785,6 +833,96 @@ Thermal dynamic properties
 	The integrand is an odd function of $p$, so it vanishes.
 % section problem_3_43 (end)
 
+<<<<<<< Updated upstream
 
 
 \end{document}
+=======
+\section*{Problem 3.44}
+	(a)\\
+	Assume there are $N$ distinguishable messages. The probabilities of these messages are $p_i$, where $i$ ranges from 1 to N. Due to the probability property of$p_i$, they must satisfy $\sum\limits_{i=1}^{N}{p_i}=1$. In order to determine the maximum of the Shannon entropy, we should intruduce langrange multiplier $\lambda$ to the expression.\\
+	\begin{align}
+		L&=I+\lambda((\sum\limits_{i=1}^{N}{p_i})-1)\\
+		&=-\sum\limits_{i=1}^{N}{p_i \ln(p_i)}+\lambda((\sum\limits_{i=1}^{N}{p_i})-1)\\
+	\end{align}
+	The maximum is reached when
+	\begin{align}
+		&\frac{\partial L}{\partial p_i}=0\\
+		&\frac{\partial L}{\partial \lambda}=0
+	\end{align}
+	This can be evaluated to be
+	\begin{align}
+		&-1-\ln(p_i)+\lambda=0\\
+		&\sum\limits_{i=1}^{N}{p_i}=1\\
+		&\rightarrow Ne^{\lambda-1}=1\\
+		&\rightarrow \lambda=1+\ln(\frac{1}{N})\\
+		&\rightarrow p_i=e^{\lambda-1}=\frac{1}{N}
+	\end{align}
+	It is easy to show that this is the maxima of the entropy.\\
+	(b)\\
+	For uncorrelated character set of size $N$ in which the probability of every character is $p_i$
+	\begin{align}
+		I_1&=\sum\limits_{i=1}^{N}{-p_i\ln(p_i)} \\
+		I_2&=\sum\limits_{i,j=1}^{N,N}{-p_ip_j\ln(p_ip_j)}\\
+		&=\sum\limits_{i,j=1}^{N,N}{-p_ip_j(\ln(p_i)+\ln(p_j))}\\
+		&=\sum\limits_{i,j=1}^{N,N}{-p_ip_j\ln(p_i)}+\sum\limits_{i,j=1}^{N,N}{-p_ip_j\ln(p_j)}\\
+		&=\sum\limits_{i=1}^{N}{-(\sum\limits_{j=1}^{N}{p_j})p_i\ln(p_i)}+\sum\limits_{j=1}^{N}{-(\sum\limits_{i=1}^{N}{p_i})p_j\ln(p_j)}\\
+		&=\sum\limits_{i=1}^{N}{-p_i\ln(p_i)}+\sum\limits_{j=1}^{N}{-p_j\ln(p_j)}\\
+		&=2\sum\limits_{i=1}^{N}{-p_i\ln(p_i)}=2I_1
+	\end{align}
+	If some characters are correlated, the entropy becomes\\
+	\begin{align}
+		I_2'&=\sum\limits_{i,j=1}^{N,N}{-p_ip_jG_{i,j}\ln(p_ip_jG_{i,j})}\\
+		&=\sum\limits_{i,j=1}^{N,N}{-p_ip_jG_{i,j}(\ln(p_i)+\ln(p_j)+\ln(G_{i,j}))}\\
+	\end{align}
+	Notice that
+	\begin{align}
+		\sum\limits_{j=1}^{N}{p_ip_jG_{i,j}}=p_i\rightarrow\sum\limits_{j=1}^{N}{p_jG_{i,j}}=1
+	\end{align}
+	\begin{align}
+		I_2'&=\sum\limits_{i=1}^{N}{-p_i\ln(p_i)}+\sum\limits_{j=1}^{N}{-p_j\ln(p_j)}+\sum\limits_{i,j=1}^{N,N}{-p_ip_jG_{i,j}\ln(G_{i,j})}\\
+		I_2-I_2'&=\sum\limits_{i,j=1}^{N,N}{p_ip_jG_{i,j}\ln(G_{i,j})}\\
+	\end{align}
+	(c)\\
+	The code written in C is shown below.
+	\begin{lstlisting}[language={[ANSI]C},numbers=left,basicstyle=\ttfamily]
+#include "stdio.h"
+#include "math.h"
+#define BUF_SIZE 1000
+#define CHAR_NUM 256
+
+int main()
+{
+  FILE* fp=fopen("./1.pdf","rb");
+  int ch_cnt=0;
+  int data_cnt=0;
+  unsigned int ch_pool[CHAR_NUM];
+  unsigned char buf[BUF_SIZE];
+  float entropy=0.0;
+
+  for(int i=0;i<CHAR_NUM;++i)
+    ch_pool[i]=0;
+  ch_cnt=fread(buf,sizeof(unsigned char),BUF_SIZE,fp);
+  while(ch_cnt>0)
+  {
+    data_cnt+=ch_cnt;
+    for(int i=0;i<ch_cnt;++i)
+      ch_pool[buf[i]]+=1;
+    ch_cnt=fread(buf,sizeof(unsigned char),BUF_SIZE,fp);
+  }
+  printf("Total=%d\n",data_cnt);
+  for(int i=0;i<CHAR_NUM;++i)
+  {
+    float prob=(float)ch_pool[i]/(float)data_cnt;
+    if(prob>0)
+      entropy-=prob*log(prob);
+  }
+  printf("I=%f\n",entropy);
+  printf("ln(256)=%f\n", log(256));
+  fclose(fp);
+  return 0;
+}
+	\end{lstlisting}
+	in which 1.pdf is the pdf version of the Pathrina book, and the entropy result is 
+\end{document}
+>>>>>>> Stashed changes
