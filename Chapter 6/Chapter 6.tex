@@ -38,6 +38,18 @@
 \maketitle
 \section*{Problem 6.1}
 
+
+\section*{Problem 6.4}
+According to the definition of S:
+$$S=-k\sum_{r}P_{r}ln(P_{r})$$
+So the density of electrical is $P_{r}$
+$$dU=\sum_{r}P_rdE_r$$
+Because we consider the interaction potential energy twice.
+$$\phi(r)=\phi_{ext}(r)+e\int\frac{n(r')}{|r-r'|}dr'$$
+According to gauss's law:
+$$n(r)=\epsilon\nabla^2{\phi}$$
+
+
 \section*{Problem 6.6} % (fold)
 \label{sec:problem_6_6}
 	For any speed distribution, we have $ P(u)\ge0,u\ge 0 $. Utilize the Cauchy inequality:
@@ -98,6 +110,14 @@ so for two different temperature, we can calculate the ratio of the function $f(
 so the integral of $f(u,T_2)$ will twice larger than that of $f(u,T_1)$, which means the dissociation probability will be more than twice.
 
 
+\section*{Problem 6.14}
+Consider the $v_x$ and the $v_y$ are independent 
+$$E_x+E_y=kT$$
+We can find the $E_z$ equal to the single molecular's pressure to he wall.
+$$E_z=kT$$ 
+So the average energy is 2kT
+
+
 \section*{Problem 6.16} % (fold)
 \label{sec:problem_6_16}
 	According to eqt 6.4.13, the effusion rate for Boltzmanian gas is
@@ -155,6 +175,16 @@ T_{\mathrm{oc}} = \frac{\hbar}{k}\sqrt{\frac{4V_0}{a^2 m}}\sim 6394\mathrm{K}
 $$
 Since $T_{\mathrm{oc}}\gg T_\mathrm{rot}$, the approximation that the molecule is rigid when we calculate the moment of inertia is acceptable. And our conclusion is that the oscillating mode will begin to contribute to the heat capacity at temperature $\sim 6000\mathrm{K}$ and vibration mode will begin to contribute to heat capacity at temperature $\sim 70\mathrm{K}$.
 
+
+
+\section*{Problem 6.24}
+As the change of the r,the potential energy also be changed:
+$$\frac{\delta E}{E}=\frac{\delta r}{r}=\frac{\delta L}{L}^2$$
+$$\delta L=J(J+1)\hbar^2$$
+$$L=I\omega$$
+so we can get the equation 
+$$\frac{\delta r}{r}=\frac{\hbar}{\mu r^2\omega}^2(J+1)J$$
+
 \section*{Problem 6.26} % (fold)
 \label{sec:problem_6_26}
 	
@@ -179,4 +209,9 @@ And from the given condition, we can calculate the equilibrium constant will be:
 K(T) = \exp\left(-\beta \Delta \mu^{(0)}\right) = 6.75\times 10^{27}\,.
 \end{equation}
 
+
+\section*{Program 6.34}
+We know the Saha equation is
+$$\frac{\alpha^2}{1-\alpha^2}=\frac{2.4*10^{-4}}{p}T^2.5e^{-\frac{E}{kT}}$$
+$\alpha$ is density of ion/density of molecular.So you put the $E=5.139eV$ into the equation you can get the relationship and plot.Plot has been ignored.
 \end{document}
