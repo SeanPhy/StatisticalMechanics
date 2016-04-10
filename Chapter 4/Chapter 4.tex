@@ -107,6 +107,17 @@ And this result is consistent with the one we get by Poison distribution.
 	So we can infer that:
 	$$S=k[\frac{\partial (Tq)}{\partial{T}}]_{V,\mu}$$
 % section problem_4_5 (end)
+\section*{Problem 4.6}
+$\ln{Y_N(P,T)}=\ln{Q_N(V,T)}+\beta pV=-\beta A+\beta pV$\\
+$G=A+pV=-kT\ln{Y_N}$\\
+Thus the Gibbs free energy is proportional to $\ln{Y_N(P,T)}$, with a factor of $-kT$.\\
+As for classical ideal gas, the canonical partition function writes as $Q_N=\frac{1}{h^{3N}N!}V^N(2\pi mkT)^{N/2}$\\
+$Y_N=\frac{1}{h^{3N}N!}(2\pi mkT)^{3N/2}\int_0^\infty{V^N e^{-\beta pV}dV}=\frac{1}{h^{3N}}(2\pi mkT)^{3N/2}(\frac{kT}{p})^N$\\
+Use the fact $V=(\frac{\partial G}{\partial p})_{T,N}$, we can easily obtain the relation $pV=NkT$.\\
+
+
+
+
 \section*{Problem 4.9}
 This problem is totally identical with Mr.Ni's material for class, I regard it meaningless to move those calculations here.
 
@@ -176,6 +187,16 @@ Experiment result is $P_\sigma \sim 1500\mathrm{kPa}$, and our calculation is ap
 	Use the triple point parameter.
 	$$ln(p)=-\frac{L}{kT}+6.6\times10^{26}$$
 % section problem_4_15 (end)
+
+\section*{Problem 4.16}
+	Utilizing Clausius-Clapeyron equation near water triple point.
+	\begin{align}
+		\frac{dp}{dT}&=\frac{L}{T\Delta v}\\
+		&=\frac{80cal/g*1g}{273.16K (\frac{1g}{0.92g/cm^3}-\frac{1g}{1g/cm^2})}\\
+		&=1.409*10^7 Pa/K\\
+		\frac{dT}{dp}&=0.007096 K/atm
+	\end{align}
+	The melting temperature of water would be near $273.16K-0.7096K=272.4504K$ under the pressure of $100atm$.\\
 
 \section*{Problem 4.17} % (fold)
 \label{sec:problem_4_17}
