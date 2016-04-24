@@ -38,5 +38,53 @@
 \maketitle
 \section*{Problem 7.1}
 
+\section*{Problem 7.4}
+We can deduce from 7.1.30 and 7.1.26a,when p is a const:
+$$g_{\frac{5}{2}}\propto T^{-\frac{5}{2}}$$
+So we have:
+$$(\frac{\partial}{\partial T}{g_{\frac{5}{2}}(z)})_p=-\frac{5}{2T}  g_{\frac{5}{2}}(z)$$
+According to the D.10 from appendix D:
+$$z\frac{\partial}{\partial z}g_{\frac{5}{2}}(z)=g_{\frac{3}{2}}(z)$$
+Combine the two equation:
+$$\frac{1}{z}(\frac{\partial z}{\partial T})_p=-\frac{5}{2T}\frac{g_{\frac{5}{2}}(z)}{g_{\frac{3}{2}}(z)}$$
+If you compare with 7.1.36 you can get:
+$$\gamma=\frac{5}{3}\frac{g_{\frac{5}{2}}(z)g_{\frac{1}{2}}(z)}{g_{\frac{3}{2}}(z)^2}$$
+
+
+\section*{Problem 7.14}
+From the definition of p and U:
+$$p=\frac{kT}{\lambda ^n}g_{\frac{5}{2}}(z)$$
+$$U=\frac{nkTV}{s\lambda ^n}g_{\frac{5}{2}}(z)$$
+So we get:
+$$p=\frac{sU}{nV}$$
+And when $T\rightarrow\infty$,we could use the ideal gas equation.
+$$pV=nRT$$
+So
+$$C_V=\frac{n}{s}Nk,C_p=(\frac{n}{s}+1)Nk$$
+
+
+\section*{Problem 7.24}
+We can deduce from 7.3.12 and 7.3.19 and 7.3.23.
+$$u=4.16*10^{-14}$$
+$$s=2.03*10^{-14}$$
+$$n=4.09*10^{8}$$
+
+
+\section*{Problem 7.34}
+For the n-dimensional Debye system,we can get the function of  state number:
+$$g(\omega)\propto
+\begin{cases}
+0& \text{($\omega>\omega_D$)}\\
+\omega^{n-1}& \text{($0<\omega<\omega_D$)}
+\end{cases}$$
+Then we consider the energy of the Debye system:
+$$U_{ph}\propto \int_0^{\omega_D}\frac{\omega^n}{exp(\beta\hbar\omega)-1}d\omega\propto T^{n+1}$$
+We can know the specific heat from thermodynamics:
+$$C_V=(\frac{\partial U}{\partial T})_V\propto T^n$$
+
+
+
+
+
 \end{document}
 
