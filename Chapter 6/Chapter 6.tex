@@ -78,6 +78,80 @@ Z&=&\frac{1}{N!}(\int e^{-\beta (gz+\frac{p^2}{2m})}\frac{d^3\vec{p}d^3\vec{x}}{
 Where S is the cylinder's cross area. The rest calculation is of little value. Note that we can naturally infer that the heat capacity is larger than that of free space situation by arguing that higher temperature will flatten the z-distribution and raise the gravitational potential energy.
 
 
+\section*{Problem 6.11}
+\paragraph*{(a)}
+\begin{equation}
+\int_{0}^{\infty} C \mathrm{e}^{-\beta c (p^2+m_0^2c^2)^{1/2}} p^2 dp = Cm_0^3c^3 \int_0^{\infty} \mathrm{e}^{-\beta m_0c^2 (y^2+1)^{\frac{1}{2}}} y^2 dy = Cm_0^3c^3 \int_0^{\infty} \mathrm{e}^{-\beta m_0c^2 \cosh t} \sinh^2t \cosh t dt
+\end{equation}
+
+\begin{equation}
+\sinh^2 t \cosh t = \frac{1}{4} (\cosh 3t -\cosh t)
+\end{equation}
+As
+\begin{equation}
+K_{\alpha}(x)= \int_0^{\infty} \mathrm{e}^{-x\cosh t} \cosh \alpha t dt  
+\end{equation}
+So,
+\begin{equation}
+\int_{0}^{\infty} C \mathrm{e}^{-\beta c (p^2+m_0^2c^2)^{1/2}} p^2 dp = \frac{Cm_0^3c^3}{4} (K_3(\beta m_0c^2)-K_1(\beta m_0c^2)) = C \frac{m_0^2 c}{\beta} K_2(\beta m_0 c^2)
+\end{equation}
+
+\begin{equation}
+C=\frac{\beta}{m_0^2 c K_2(\beta m_0 c^2)}
+\end{equation}
+
+
+\paragraph*{(b)}
+When $\beta m_0c^2 \gg 1$,$\frac{1}{K_2(\beta m_0c^2)}=e^{\beta m_0c^2} \sqrt{\frac{2\beta m_0c^2}{\pi}}$.
+\begin{equation}
+C=4\pi (\frac{\beta}{2\pi m_0})^{\frac{3}{2}}e^{\beta m_0c^2}
+\end{equation}
+Because $\beta m_0 c^2 \gg 1$, so the $p$ with significant probability is much smaller than $m_0c$,so
+\begin{equation}
+\mathrm{e}^{-\beta c (p^2+m_0^2c^2)^{1/2}} = e^{-\beta m_0c^2(1+\frac{p^2}{2m_0^2c^2})}
+\end{equation}
+And
+\begin{equation}
+f(p) = (\frac{\beta}{2\pi m_0})^{\frac{3}{2}} e^{-\beta \frac{p^2}{2m_0}} 4\pi p^2
+\end{equation}
+
+When $\beta m_0c^2 \ll 1$,$\frac{1}{K_2(\beta m_0c^2)}= \frac{\beta^2 m_0^2 c^4}{2}$.
+\begin{equation}
+C=\frac{\beta^3 c^3}{2}
+\end{equation}
+\begin{equation}
+\mathrm{e}^{-\beta c (p^2+m_0^2c^2)^{1/2}} = e^{-\beta pc}
+\end{equation}
+So,
+\begin{equation}
+f(p)=\frac{\beta^3 c^3}{8 \pi} 4\pi p^2 
+\end{equation}
+
+\paragraph*{(c)}
+We denote $y=\frac{p}{m_0c}$
+\begin{equation}
+u=(\frac{y^2}{1+y^2})^{\frac{1}{2}} c 
+\end{equation}
+So,
+\begin{equation}
+\langle pu \rangle = C m_0^4c^5 \int_0^{\infty} \mathrm{e}^{-\beta m_0c^2 (y^2+1)^{\frac{1}{2}}} (\frac{y^2}{1+y^2})^{\frac{1}{2}} y^3 dy =  C m_0^4c^5 \int_0^{\infty} \mathrm{e}^{-\beta m_0c^2 \cosh t} \sinh^4 t dt
+\end{equation}
+\begin{equation}
+\sinh^4t = \frac{3\cosh t + \cosh 4t - 4\cosh 2t}{8}
+\end{equation}
+So,
+\begin{equation}
+\langle pu \rangle = C m_0^4c^5 \frac{3K_0(\beta m_0c^2) + K_4(\beta m_0c^2)  - 4K_2(\beta m_0c^2)}{8}
+\end{equation}
+Because
+\begin{equation}
+K_4(x)+3K_0(x)-4K_2(x)= \frac{24K_2(x)}{x^2}
+\end{equation}
+Then,
+\begin{equation}
+\langle pu \rangle = \frac{\beta}{m_0^2 c K_2(\beta m_0 c^2)} m_0^4c^5 \frac{3K_2(\beta m_0 c^2)}{\beta^2 m_0^2 c^4} = 3kT
+\end{equation}
+
 \section*{Problem 6.13}
 For classical ideal gases, the velocity distribution of the atoms are the Maxwell distribution, which can be obtained by canonical distribution:
 \begin{equation}
@@ -144,6 +218,38 @@ So the average energy is 2kT
 \end{eqnarray*}
 Proved.
 
+\section*{Problem 6.21}
+As temperatures is high enough to allow classical approximation for the rotational motion of the molecules.\\
+For a heteronuclear molecules,
+\begin{equation}
+j_{rot}(T)=\sum_0^{\infty} (2l+1) \exp(-l(l+1) \frac{\hbar^2}{2IkT}) \approx \int_0^{\infty} (2l+1) \exp(-l(l+1) \frac{\hbar^2}{2IkT}) dl =\frac{T}{\Theta_r}
+\end{equation}
+For a homonuclear molecules,
+\begin{equation}
+j_{rot}(T) = \frac{T}{2\Theta_r}
+\end{equation}
+Here,$I=\mu r_0^2$,$\Theta_r=\frac{\hbar^2}{2Ik}$.
+So,
+\begin{equation}
+\mu_{int} = -kT \mathrm{ln}j_{rot}
+\end{equation}
+\begin{equation}
+\mu_{trans}= kT \mathrm{ln}(\frac{N}{V} \left(\frac{\hbar^2}{2\pi mkT}\right)^{\frac{3}{2}} )
+\end{equation}
+\begin{equation}
+K[T]=\exp(-\beta(2\mu_{HD}-\mu_{H_2}-\mu_{D_2})) =\frac{\left [\exp(-\beta \epsilon_{0(HD)}) \frac{\frac{T}{\Theta_{r(HD)}}}{n_0 \lambda_{HD}^3} \right]^2} {\left [\exp(-\beta \epsilon_{0(H_2)}) \frac{\frac{T}{2\Theta_{r(H_2)}}}{n_0 \lambda_{H_2}^3} \right] \left [\exp(-\beta \epsilon_{0(D_2)}) \frac{\frac{T}{2\Theta_{r(D_2)}}}{n_0 \lambda_{D_2}^3} \right]}
+\end{equation}
+We can simplify it as
+\begin{equation}
+K[T]=4 \exp(-\beta(2\epsilon_{0(HD)}-\epsilon_{0(H_2)}-\epsilon_{0(D_2)})) \frac{\Theta_{r(D_2)}\Theta_{r(H_2)}}{\Theta_{r(HD)}^2} \frac{\lambda_{H_2}^3\lambda_{D_2}^3}{\lambda_{HD}^6}
+\end{equation}
+\begin{equation}
+K[T]=4 \exp(-\beta(2\epsilon_{0(HD)}-\epsilon_{0(H_2)}-\epsilon_{0(D_2)})) \frac{I_{HD}^2}{I_{H_2}I_{D_2}} \frac{m_{HD}^3}{\sqrt{m_{H_2}^3m_{D_2}^3}}
+\end{equation}
+We can assume that $\frac{I_{HD}^2}{I_{H_2}I_{D_2}} \approx 1$, $\frac{m_{HD}^3}{\sqrt{m_{H_2}^3m_{D_2}^3}} \approx 1$. When $\beta \ll 1$ ,we have $K[\infty] = 4$
+
+
+
 \section*{Problem 6.23}
 The first step is to find the equilibrium point:
 $$
@@ -193,6 +299,22 @@ $$\frac{\delta r}{r}=\frac{\hbar}{\mu r^2\omega}^2(J+1)J$$
 
 \section*{Problem 6.28}
 Again, I regard this problem as a pure calculational exercise and have no interest to do it now. (Actually up till now my problems are all such things, so I will preserve those seemingly more tedious work. )
+
+
+
+\section*{Problem 6.31}
+$T=1500K$
+\begin{equation}
+K[T] = \exp(-\beta(2\mu^{0}_{CO_2}-\mu^{0}_{O_2}-2\mu^{0}_{CO})) = 4.2 \times 10^{10}
+\end{equation}
+So,$[CO]/[CO_2] = 4.9 \times 10^{-5}$ for the case of $[O_2] = 0.01$\\
+$T = 600 K$
+\begin{equation}
+K[T] = \exp(-\beta(2\mu^{0}_{CO_2}-\mu^{0}_{O_2}-2\mu^{0}_{CO})) = 1.7 \times 10^{40}
+\end{equation}
+So,$[CO]/[CO_2] = 7.6 \times 10^{-20}$ for the case of $[O_2] = 0.01$
+
+
 
 \section*{Problem 6.33}
 Assumes that the initial density of $\mathrm{O}_2$ and $\mathrm{CH}_4$ is 

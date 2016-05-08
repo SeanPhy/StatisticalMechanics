@@ -50,6 +50,67 @@ $$\frac{1}{z}(\frac{\partial z}{\partial T})_p=-\frac{5}{2T}\frac{g_{\frac{5}{2}
 If you compare with 7.1.36 you can get:
 $$\gamma=\frac{5}{3}\frac{g_{\frac{5}{2}}(z)g_{\frac{1}{2}}(z)}{g_{\frac{3}{2}}(z)^2}$$
 
+\section*{Problem 7.11}
+\subsection*{(a)}
+At the critical point of B-E condensation,$N_0 \ll N$,$z=1$.
+\begin{equation}
+\frac{N}{V} = \frac{1}{\lambda^3} \frac{1}{\Gamma(\frac{3}{2})} (\int_0^{\infty} \frac{x^{\frac{1}{2}}dx}{e^x+1} + \int_0^{\infty} \frac{x^{\frac{1}{2}}dx}{e^{x+\beta \epsilon_1}+1})
+\end{equation}
+Because$\beta \epsilon_1 >> 1$,so 
+\begin{equation}
+\int_0^{\infty} \frac{x^{\frac{1}{2}}dx}{e^{x+\beta \epsilon_1}+1}= e^{-\beta \epsilon_1}
+\int_0^{\infty} e^{-x} x^{\frac{1}{2}} dx = \Gamma(\frac{3}{2}) e^{-\beta \epsilon_1} \ll 1
+\end{equation}
+So, we think $\Delta T = T_c-T_{c0} \ll 1$.
+\begin{equation}
+\frac{N}{V} = \frac{1}{\lambda^3} (\xi(\frac{3}{2})+e^{-\beta \epsilon_1})
+\approx \frac{1}{\lambda_0^3} (1+\frac{3\Delta T}{2 T_{c0}})(\xi(\frac{3}{2})+e^{\frac{\epsilon_1}{kT_{c0}}})
+\end{equation}
+And we know
+\begin{equation}
+\frac{N}{V} = \frac{1}{\lambda_0^3} \xi(\frac{3}{2})
+\end{equation}
+So,
+\begin{equation}
+\frac{3\Delta T}{2 T_{c0}} \xi(\frac{3}{2}) + e^{\frac{\epsilon_1}{kT_{c0}}} =0
+\end{equation}
+\begin{equation}
+\frac{T_c}{T_{c0}} = 1 -  \frac{\frac{2}{3}}{\xi(\frac{3}{2})} e^{\frac{\epsilon_1}{kT_{c0}}}
+\end{equation}
+
+\subsection*{(b)}
+\begin{equation}
+\frac{N}{V} = \frac{1}{\lambda^3} \frac{1}{\Gamma(\frac{3}{2})} (\int_0^{\infty} \frac{x^{\frac{1}{2}}dx}{e^x+1} + \int_0^{\infty} \frac{x^{\frac{1}{2}}dx}{e^{x+\beta \epsilon_1}+1}) = \frac{1}{\lambda^3} (g_{3/2}(1) + g_{3/2}(e^{-\beta \epsilon_1}))
+\end{equation}
+As $\beta \epsilon_1 \ll 1$, we can expand $g_{3/2}(e^{-\beta \epsilon_1})$ and keep the first two terms.
+\begin{equation}
+\frac{N}{V} = \frac{1}{\lambda^3} (2\xi(\frac{3}{2})+\Gamma(-\frac{1}{2})(\beta \epsilon_1)^{\frac{1}{2}}) = \frac{1}{\lambda_0^3} \xi(\frac{3}{2})
+\end{equation}
+If $\beta \epsilon_1 = 0$,
+\begin{equation}
+\lambda' = 2^{\frac{1}{3}} \lambda_0
+\end{equation}
+\begin{equation}
+T'_c = (\frac{1}{2})^{\frac{2}{3}}T_{c0}
+\end{equation}
+And $T'_{c}-T_c \ll 1$.
+
+\begin{equation}
+\frac{N}{V} = \frac{2}{\lambda'^3} (1+\frac{3\Delta T}{2 T'_{c}}) (\xi(\frac{3}{2}) - \sqrt{\pi (\frac{\epsilon_1}{kT'_c}})) = \frac{1}{\lambda_0^3} \xi(\frac{3}{2})
+\end{equation}
+
+\begin{equation}
+\frac{3\Delta T}{2 T'_{c}} \xi(\frac{3}{2}) - \sqrt{\frac{\pi \epsilon_1}{kT'_c}} =0 
+\end{equation}
+
+\begin{equation}
+\frac{\Delta T}{T'_{c}} = \frac{\frac{2}{3}}{\xi(\frac{3}{2})}\sqrt{\frac{\pi \epsilon_1}{kT'_c})} =  \frac{2^{\frac{4}{3}}}{3\xi(\frac{3}{2})} \sqrt{\frac{\pi \epsilon_1}{kT_{c0}}}
+\end{equation}
+
+\begin{equation}
+\frac{T_c}{T_{c0}} = (\frac{1}{2})^{\frac{2}{3}} (1+\frac{2^{\frac{4}{3}}}{3\xi(\frac{3}{2})} \sqrt{\frac{\pi \epsilon_1}{kT_{c0}}})
+\end{equation}
+
 
 \section*{Problem 7.14}
 From the definition of p and U:
@@ -62,6 +123,18 @@ $$pV=nRT$$
 So
 $$C_V=\frac{n}{s}Nk,C_p=(\frac{n}{s}+1)Nk$$
 
+\section*{Problem 7.21}
+\begin{equation}
+\frac{N}{V} = \frac{1}{h^3}\int_0^{\infty} \frac{8\pi \frac{\epsilon^2}{c^3}d\epsilon}{e^{\beta \epsilon}-1} = \frac{8\pi}{\beta^3h^3c^3} \int_0^{\infty} \frac{x^2 dx}{e^{x}-1} =\frac{8\pi}{\beta^3h^3c^3} \Gamma(3) \xi(3)
+\end{equation}
+
+\begin{equation}
+\frac{E}{V} = \frac{1}{h^3}\int_0^{\infty} \frac{8\pi \frac{\epsilon^3}{c^3}d\epsilon}{e^{\beta \epsilon}-1} = \frac{8\pi}{\beta^4h^3c^3} \int_0^{\infty} \frac{x^3 dx}{e^{x}-1} =\frac{8\pi}{\beta^4h^3c^3} \Gamma(4) \xi(4)
+\end{equation}
+
+\begin{equation}
+\frac{E}{N} = \frac{3\xi(4)}{\xi(3)} kT \approx 2.7kT
+\end{equation}
 
 \section*{Problem 7.24}
 We can deduce from 7.3.12 and 7.3.19 and 7.3.23.
@@ -69,6 +142,26 @@ $$u=4.16*10^{-14}$$
 $$s=2.03*10^{-14}$$
 $$n=4.09*10^{8}$$
 
+
+\section*{Problem 7.31}
+The state density for transverse phonon is
+\begin{equation}
+g(\omega) = \frac{6N}{\omega^3_{DT}} \omega^2
+\end{equation}
+The state density for longitudinal phonon is
+\begin{equation}
+g(\omega) = \frac{3N}{\omega^3_{DL}} \omega^2
+\end{equation}
+And
+\begin{equation}
+C_V = C_{VT} + C_{VL}
+\end{equation}
+Compared with equation (7.4.17),it is easy to find verify that
+\begin{equation}
+C_V = Nk(2D(x_{0,T}) + D(x_{0,L})))
+\end{equation}
+The nature of the error in equation (7.4.17) comes from the fact that the longitudinal and the transverse modes of the solid should have their own cutoff frequencies, $\omega_{DL}$ and $\omega_{DT}$ rather than a common cutoff at $\omega_{D}$.
+\end{document}
 
 \section*{Problem 7.34}
 For the n-dimensional Debye system,we can get the function of  state number:
